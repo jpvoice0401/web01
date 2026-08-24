@@ -1,0 +1,325 @@
+[
+  {
+    "id": "art-unveil-series",
+    "category": "artwork",
+    "categoryName": "ARTWORK",
+    "title": "UN_VEIL (은폐와 탈은폐 : 언베일 연작)",
+    "subtitle": "자본, 권력, 기호의 다차원적 은폐와 탈은폐를 탐구한 도자·회화 연작",
+    "year": "2023 - 2024",
+    "client": "ARTIST JIHYUN PARK",
+    "image": "work_images/art/unveil series/art-together-to-gather_p38.jpeg",
+    "gallery": [
+      "work_images/art/unveil series/art-together-to-gather_p38.jpeg",
+      "work_images/art/un_veil 01.png",
+      "work_images/art/un_veil01.jpg",
+      "work_images/art/un_veil04.jpg",
+      "work_images/art/un_veil_bitcoin.jpg",
+      "work_images/art/un_veil_gov.jpg",
+      "work_images/art/un_veil_mike.jpg",
+      "work_images/art/un_veil_money.jpg",
+      "work_images/art/un_veil_moneyseries.jpg",
+      "work_images/art/un_veil_qm.jpg",
+      "work_images/art/un_veil_w.jpg",
+      "work_images/art/unveil_ceramic01.jpg",
+      "work_images/art/unveil_ceramic_너희들의침묵은못견디게시끄러워.jpg",
+      "work_images/art/unveil_ceramic_정치냐치정이냐.jpg",
+      "work_images/art/unveil_pocket01.jpg",
+      "work_images/art/unveil_pocket02.jpg",
+      "work_images/art/unveil_trans00.jpg",
+      "work_images/art/unveil_trans01.jpg"
+    ],
+    "tags": [
+      "Solo Exhibition",
+      "Un_veil",
+      "Ceramic & Print",
+      "Contemporary Art"
+    ],
+    "description": "기호와 자본, 화폐와 권력의 표상을 덮고 있는 장막을 벗겨내며 이미지의 실재와 허상을 조명한 대표 연작입니다.",
+    "stats": "총 17점의 작품 수록",
+    "featured": true
+  },
+  {
+    "id": "art-disney-dejavu",
+    "category": "artwork",
+    "categoryName": "ARTWORK",
+    "title": "DISNEY DÉJÀ VU (디즈니 데자뷰 연작)",
+    "subtitle": "대중문화 캐릭터의 형상과 디지털 이미지의 잔상을 해체한 연작",
+    "year": "2024",
+    "client": "ARTIST JIHYUN PARK",
+    "image": "work_images/art/dejavu_desiney00.jpg",
+    "gallery": [
+      "work_images/art/dejavu_desiney00.jpg",
+      "work_images/art/dejavu_desiney01.png",
+      "work_images/art/dejavu_desiney02.jpg"
+    ],
+    "tags": [
+      "Solo Exhibition",
+      "Pop Art",
+      "Generative Art",
+      "Contemporary Painting"
+    ],
+    "description": "익숙한 대중문화 캐릭터의 형상을 디지털 매체와 현대 회화의 교차점에서 해체하고 재구성한 연작입니다.",
+    "stats": "총 3점의 작품 수록",
+    "featured": true
+  },
+  {
+    "id": "art-0g-zerogravity",
+    "category": "artwork",
+    "categoryName": "ARTWORK",
+    "title": "0g ZERO-GRAVITY (0g 무중력 회화 연작)",
+    "subtitle": "중력을 벗어난 입자들의 공간적 유영과 긴장감을 시각화한 회화·평면 연작",
+    "year": "2024 - 2025",
+    "client": "ARTIST JIHYUN PARK",
+    "image": "work_images/art/0g00.jpg",
+    "gallery": [
+      "work_images/art/0g00.jpg",
+      "work_images/art/0g01.jpg",
+      "work_images/art/0g03.jpg",
+      "work_images/art/0g04.jpg",
+      "work_images/art/0g05.jpg"
+    ],
+    "tags": [
+      "0g Gravity",
+      "Abstract Geometry",
+      "Contemporary Painting",
+      "Optics"
+    ],
+    "description": "무중력 상태의 부유하는 입자들과 공간적 긴장을 기하학적 색면과 조형 벡터로 표현한 추상 연작입니다.",
+    "stats": "총 5점의 작품 수록",
+    "featured": true
+  },
+  {
+    "id": "art-motel-series",
+    "category": "artwork",
+    "categoryName": "ARTWORK",
+    "title": "MOTEL (모텔 시리즈 회화·일러스트)",
+    "subtitle": "도시의 은밀한 공간성과 인간 내면의 심리적 풍경을 포착한 연작",
+    "year": "2022 - 2023",
+    "client": "ARTIST JIHYUN PARK",
+    "image": "work_images/art/motel00.png",
+    "gallery": [
+      "work_images/art/motel00.png",
+      "work_images/art/motel01.jpg",
+      "work_images/art/motel02.png",
+      "work_images/art/motel03.jpg",
+      "work_images/art/motel04.jpg",
+      "work_images/art/motel05.jpg"
+    ],
+    "tags": [
+      "Spatial Painting",
+      "Illustration",
+      "Contemporary Art",
+      "Editorial"
+    ],
+    "description": "현대 도시의 일시적 안식처이자 은밀한 공간인 모텔을 매개로 인간의 고독과 욕망의 궤적을 담아낸 회화 시리즈입니다.",
+    "stats": "총 6점의 작품 수록",
+    "featured": true
+  },
+  {
+    "id": "art-desire-instinct",
+    "category": "artwork",
+    "categoryName": "ARTWORK",
+    "title": "DESIRE & HUMAN INSTINCT (욕망과 본능 연작)",
+    "subtitle": "현대인의 물질적 갈망, 식욕, 본능적 욕구를 풍자적 조형으로 시각화한 작업",
+    "year": "2023",
+    "client": "ARTIST JIHYUN PARK",
+    "image": "work_images/art/desire01.jpg",
+    "gallery": [
+      "work_images/art/desire01.jpg",
+      "work_images/art/desire03.jpg",
+      "work_images/art/desire04.jpg",
+      "work_images/art/threegreatdesires.jpg",
+      "work_images/art/eat-fat.jpg"
+    ],
+    "tags": [
+      "Contemporary Art",
+      "Visual Satire",
+      "Pop Culture",
+      "Installation"
+    ],
+    "description": "소비 사회 속에서 비대해진 인간의 3대 욕망과 본능을 원색적 대비와 도발적인 그래픽 조형으로 시각화했습니다.",
+    "stats": "총 5점의 작품 수록",
+    "featured": true
+  },
+  {
+    "id": "art-news-invisible-hand",
+    "category": "artwork",
+    "categoryName": "ARTWORK",
+    "title": "NEWS & THE INVISIBLE HAND (보이지 않는 손과 뉴스)",
+    "subtitle": "미디어 정보의 홍수와 경제적 보이지 않는 손을 탐구한 에디토리얼 연작",
+    "year": "2023 - 2024",
+    "client": "ARTIST JIHYUN PARK",
+    "image": "work_images/art/news01.jpg",
+    "gallery": [
+      "work_images/art/news01.jpg",
+      "work_images/art/news02.jpg",
+      "work_images/art/news_invisiblehand.jpg",
+      "work_images/art/newspaper01.jpg",
+      "work_images/art/newspaper02.jpg"
+    ],
+    "tags": [
+      "Media Critique",
+      "Editorial Graphic",
+      "Typography",
+      "News Print"
+    ],
+    "description": "활자와 신문, 자본주의의 보이지 않는 손이 만들어내는 거대한 정보의 흐름을 시각적 레이어로 재해석한 작업입니다.",
+    "stats": "총 5점의 작품 수록",
+    "featured": true
+  },
+  {
+    "id": "art-oath-series",
+    "category": "artwork",
+    "categoryName": "ARTWORK",
+    "title": "OATH (서약 : 맹세의 기록과 사운드 아트)",
+    "subtitle": "약속과 맹세의 비가시적 무게를 물질과 사운드의 공감각으로 시각화",
+    "year": "2022",
+    "client": "ARTIST JIHYUN PARK",
+    "image": "work_images/art/oath01.jpg",
+    "gallery": [
+      "work_images/art/oath01.jpg",
+      "work_images/art/oath02.jpg",
+      "work_images/art/oath03.jpg"
+    ],
+    "tags": [
+      "Fine Art",
+      "Sound Art",
+      "Mixed Media",
+      "Installation"
+    ],
+    "description": "인간 사이의 서약(Oath)이 갖는 숭고함과 허약함을 질감 있는 캔버스와 소리의 파동으로 엮어낸 다감각적 연작입니다.",
+    "stats": "총 3점의 작품 수록",
+    "featured": true
+  },
+  {
+    "id": "art-rock-paper-scissors",
+    "category": "artwork",
+    "categoryName": "ARTWORK",
+    "title": "ROCK PAPER SCISSORS (가위바위보 연작)",
+    "subtitle": "승패의 순환과 상대적 관계성을 기하학적 조형으로 구조화한 연작",
+    "year": "2022 - 2023",
+    "client": "ARTIST JIHYUN PARK",
+    "image": "work_images/art/rockpaperscissors01.jpg",
+    "gallery": [
+      "work_images/art/rockpaperscissors01.jpg",
+      "work_images/art/rockpaperscissors02.jpg",
+      "work_images/art/rockpaperscissors03.jpg",
+      "work_images/art/rockpaperscissors04.jpg"
+    ],
+    "tags": [
+      "Visual Structure",
+      "Game Theory",
+      "Geometric Art"
+    ],
+    "description": "물고 물리는 가위바위보의 순환적 규칙성과 상대적 관계성을 미니멀한 그래픽 오브제로 표현한 작업입니다.",
+    "stats": "총 4점의 작품 수록",
+    "featured": true
+  },
+  {
+    "id": "art-hopes-and-dreams",
+    "category": "artwork",
+    "categoryName": "ARTWORK",
+    "title": "HOPES & DREAMS (희망과 꿈의 색채 연작)",
+    "subtitle": "Bluing of Hopes & Pink of Dreams : 감각적 색채 파동의 회화",
+    "year": "2023",
+    "client": "ARTIST JIHYUN PARK",
+    "image": "work_images/art/BluingofHopes.jpg",
+    "gallery": [
+      "work_images/art/BluingofHopes.jpg",
+      "work_images/art/PinkofDreamsHopes.jpg"
+    ],
+    "tags": [
+      "Color Harmony",
+      "Contemporary Painting",
+      "Emotional Canvas"
+    ],
+    "description": "인간 내면의 순수한 열망과 꿈을 푸른색과 분홍색의 깊이 있는 그러데이션 파동으로 구현한 감성적 회화 연작입니다.",
+    "stats": "총 2점의 작품 수록",
+    "featured": true
+  },
+  {
+    "id": "art-experimental-calendar",
+    "category": "artwork",
+    "categoryName": "ARTWORK",
+    "title": "EXPERIMENTAL CALENDAR (실험적 캘린더 아카이브)",
+    "subtitle": "시간의 흐름과 타이포그래피 구조를 실험한 에디토리얼 조형",
+    "year": "2023 - 2024",
+    "client": "ARTIST JIHYUN PARK",
+    "image": "work_images/art/exp_Calender01.jpg",
+    "gallery": [
+      "work_images/art/exp_Calender01.jpg",
+      "work_images/art/exp_Calender02.jpg",
+      "work_images/art/exp_Calender03.jpg"
+    ],
+    "tags": [
+      "Calendar Design",
+      "Editorial Art",
+      "Grid System",
+      "Typography"
+    ],
+    "description": "날짜와 요일의 선형적 질서를 독창적인 그리드와 타이포그래피 변주로 해체·재구성한 실험적 캘린더 작업입니다.",
+    "stats": "총 3점의 작품 수록",
+    "featured": true
+  },
+  {
+    "id": "art-honorable-awards",
+    "category": "artwork",
+    "categoryName": "ARTWORK",
+    "title": "HONORABLE AWARDS (명예의 전당 포스터 연작)",
+    "subtitle": "성취와 영예의 순간을 볼드한 타이포그래피로 기념한 포스터 에디션",
+    "year": "2023 - 2024",
+    "client": "ARTIST JIHYUN PARK",
+    "image": "work_images/art/HonarableAwards01.jpg",
+    "gallery": [
+      "work_images/art/HonarableAwards01.jpg",
+      "work_images/art/HonarableAwards02.jpg",
+      "work_images/art/HonarableAwards03.png"
+    ],
+    "tags": [
+      "Poster Series",
+      "Award Design",
+      "Bold Typography"
+    ],
+    "description": "각 분야의 뛰어난 성취를 기념하기 위해 강렬한 대비와 정제된 타이포그래피 레이아웃으로 제작된 포스터 연작입니다.",
+    "stats": "총 3점의 작품 수록",
+    "featured": true
+  },
+  {
+    "id": "art-contemporary-statements",
+    "category": "artwork",
+    "categoryName": "ARTWORK",
+    "title": "CONTEMPORARY STATEMENTS & OBJECTS (현대미술 오브제 & 개념 회화)",
+    "subtitle": "Mirror Mirror, Money, Human, Nothing Happens 등 현대인의 실존적 조형",
+    "year": "2022 - 2024",
+    "client": "ARTIST JIHYUN PARK",
+    "image": "work_images/art/mirrormirroronthewall.jpg",
+    "gallery": [
+      "work_images/art/mirrormirroronthewall.jpg",
+      "work_images/art/money.jpg",
+      "work_images/art/human01.png",
+      "work_images/art/nothinghappens01.jpg",
+      "work_images/art/NO, hum…, yes 02.jpg",
+      "work_images/art/NO, hum…, yes 03.jpg",
+      "work_images/art/NO, hum…, yes.jpg",
+      "work_images/art/whathefuckomg.jpg",
+      "work_images/art/howtousecondom01.jpg",
+      "work_images/art/howtousecondom02.jpg",
+      "work_images/art/life.jpg",
+      "work_images/art/life02.jpg",
+      "work_images/art/typo.png",
+      "work_images/art/typo02.png",
+      "work_images/art/confusion01.gif",
+      "work_images/art/confusion02.jpg",
+      "work_images/art/metav_sehanuniversity.png"
+    ],
+    "tags": [
+      "Conceptual Art",
+      "Mixed Media",
+      "Visual Statement",
+      "Contemporary Painting"
+    ],
+    "description": "현대인의 나르시시즘(Mirror Mirror), 물질적 화폐(Money), 실존적 허무(Nothing Happens)와 인간 본성을 담아낸 개념미술 회화 연작입니다.",
+    "stats": "총 18점의 작품 수록",
+    "featured": true
+  }
+]

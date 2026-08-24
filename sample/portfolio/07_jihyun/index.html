@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JIHYUN PARK — AX VISUAL DIRECTOR · ARTIST · EDUCATOR</title>
+    <meta name="description" content="JIHYUN PARK IS AN AX VISUAL DIRECTOR & CREATIVE EDUCATOR BRIDGING FINE ART, DESIGN AND AI.">
+
+    <!-- Google Fonts: Noto Sans KR, Univers Alternatives & Modern Swiss Types -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;800;900&family=Archivo+Black&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600;700&family=Playfair+Display:ital,wght@1,500;1,600&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css?v=20260825_0353">
+</head>
+
+<body>
+
+    <!-- ============================================== -->
+    <!-- 🌌 BACKGROUND CANVAS (Minimalist Dark Matrix) -->
+    <!-- ============================================== -->
+    <canvas id="generativeCanvas" class="background-canvas"></canvas>
+
+    <!-- 🔘 Inverted Negative-Space Lens Cursor (Option 3) -->
+    <div class="inverted-lens-cursor" id="lensCursor" aria-hidden="true"></div>
+
+    <!-- ============================================== -->
+    <!-- 🧭 TOP HEADER BAR                              -->
+    <!-- ============================================== -->
+    <header class="top-nav-bar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <a href="index.html" class="nav-brand">JI-HYUN PARK</a>
+            </div>
+            <nav class="nav-right" aria-label="Main Navigation">
+                <a href="about.html" class="nav-item-link">ABOUT</a>
+                <a href="archive.html#work" class="nav-item-link">WORK</a>
+                <a href="archive.html#awards" class="nav-item-link">AWARDS</a>
+                <a href="#contact" class="nav-item-link">CONTACT</a>
+                <div class="nav-theme-dots" role="group" aria-label="Color Palette Switcher">
+                    <button class="nav-palette-dot active" data-color="#CEFF00" style="background:#CEFF00;" title="Acid Lime" aria-label="Acid Lime"></button>
+                    <button class="nav-palette-dot" data-color="#00FFA3" style="background:#00FFA3;" title="Cyber Emerald" aria-label="Cyber Emerald"></button>
+                    <button class="nav-palette-dot" data-color="#FFFFFF" style="background:#FFFFFF;" title="Pure White" aria-label="Pure White"></button>
+                    <button class="nav-palette-dot" data-color="#8B5CF6" style="background:#8B5CF6;" title="Electric Violet" aria-label="Electric Violet"></button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ============================================== -->
+    <!-- 💛 HERO POSTER (Rep.Club Style Split Poster)    -->
+    <!-- ============================================== -->
+    <section class="poster-hero-section" id="hero">
+        <div class="poster-card-wrapper">
+            
+            <!-- [TOP POSTER BLOCK: Acid Lime-Yellow Background] -->
+            <div class="poster-top-block">
+                <!-- Top Meta Line -->
+                <div class="poster-top-meta">
+                    <span class="meta-tag-left">CONCEPT // S'2026</span>
+                    <span class="meta-handle">JI-HYUN PARK</span>
+                </div>
+
+                <!-- Main Typographic Poster Wall (Univers Extra Black) -->
+                <div class="poster-typography-wall">
+                    <div class="wall-row row-1">
+                        <span class="heavy-text">CONSTRUCTING CONCEPTS</span>
+                    </div>
+
+                    <div class="wall-row row-2">
+                        <span class="heavy-text">INTO STRUCTURE</span>
+                    </div>
+
+                    <div class="wall-row row-3">
+                        <span class="heavy-text">AND INTO GENERATIVE AI MEDIA</span>
+                    </div>
+
+                    <div class="wall-row row-4">
+                        <span class="heavy-text">ACROSS ART</span>
+                        <span class="heavy-amp">&</span>
+                        <span class="heavy-text">DESIGN</span>
+                        <div class="contact-annotation-box">
+                            <span class="anno-mono">jpvoice @ naver.com</span>
+                            <span class="anno-mono">Dept. of Visual Communication Design</span>
+                        </div>
+                    </div>
+
+                    <div class="wall-row row-5">
+                        <div class="inline-annotation-box">
+                            <span class="anno-serif">Sunwha Arts Middle School,</span>
+                            <span class="anno-serif">Seoul Arts High School,</span>
+                            <span class="anno-serif">SAIC BFA · Ewha Ph.D</span>
+                        </div>
+                        <span class="heavy-text">SEOUL / CHICAGO / NEW YORK</span>
+                    </div>
+
+                    <div class="wall-row row-6">
+                        <span class="heavy-text spaced-statement">ARTIST . DESIGNER . EDUCATOR .</span>
+                    </div>
+                </div>
+
+                <!-- Sub-Keyword Manifesto Line (Italic Serif + Clean Mono) -->
+                <div class="poster-sub-manifesto">
+                    <div class="manifesto-line-1">
+                        <em>Key Practices:</em> AI Transformation (AX), Generative Media Art, TouchDesigner, Vibe Coding, 13 Solo Exhibitions, Editorial Board Member at Korean Society of Animation Studies, Korea Color Society Board, Korea AI Design Association Board,
+                    </div>
+                    <div class="manifesto-line-2">
+                        Hotel Dawson Brand Director, Samsung Card Renewal, SKT AI V-Coloring, CJ ENM IP
+                    </div>
+                </div>
+            </div>
+
+            <!-- [BOTTOM POSTER BLOCK: Deep Black Graphic Split with Kinetic Physics Typography] -->
+            <div class="poster-bottom-block" id="physicsPosterBlock">
+                <canvas id="kineticWordCanvas" style="position:absolute; inset:0; width:100%; height:100%; display:block; z-index:2; cursor:crosshair;"></canvas>
+                <div class="bottom-giant-letters" aria-hidden="true" style="opacity:0; pointer-events:none;">
+                    <span class="giant-word">PROF.PARK</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ============================================== -->
+    <!-- 🧪 2. GENERATIVE VIBE LAB                      -->
+    <!-- ============================================== -->
+    <section class="content-section" id="lab" style="margin-top: 4.5rem; margin-bottom: 4.5rem;">
+        <div class="lab-top-meta-bar">
+            <span class="section-index-pill">REALTIME CANVAS INTERACTION</span>
+        </div>
+
+        <div class="swiss-lab-box">
+            <div class="lab-left-info">
+                <div class="lab-title-group">
+                    <h3 class="lab-main-title">GENERATIVE VIBE LAB</h3>
+                </div>
+                <p class="lab-lead-text">
+                    마우스 및 터치 움직임에 유기적으로 반응하는 실시간 캔버스 파티클 시스템입니다.<br>
+                    아래 컨트롤러로 직접 시각 변수를 조작해보세요.
+                </p>
+                <div class="lab-metric-pills">
+                    <div class="m-pill"><span class="m-lbl">FPS:</span> <span class="m-val" id="labFpsVal">60.0</span></div>
+                    <div class="m-pill"><span class="m-lbl">PARTICLES:</span> <span class="m-val" id="labParticleCountVal">85</span></div>
+                    <div class="m-pill"><span class="m-lbl">SPEED:</span> <span class="m-val" id="labSpeedVal">1.0x</span></div>
+                </div>
+            </div>
+
+            <div class="lab-right-controls">
+                <div class="swiss-control-line">
+                    <label for="sliderParticleCount">DENSITY: <span id="sliderParticleCountText">85</span></label>
+                    <input type="range" id="sliderParticleCount" min="20" max="137" value="85">
+                </div>
+
+                <div class="swiss-control-line">
+                    <label for="sliderSpeed">TURBULENCE: <span id="sliderSpeedText">1.0</span></label>
+                    <input type="range" id="sliderSpeed" min="0.2" max="3.0" step="0.1" value="1.0">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================== -->
+    <!-- 📬 FOOTER & CONTACT                            -->
+    <!-- ============================================== -->
+    <footer class="poster-footer-section" id="contact" style="margin-top: 4rem; margin-bottom: 3rem;">
+        <div class="footer-inner-container">
+            <div class="footer-huge-poster-box">
+                <h2 class="footer-huge-type">JI-HYUN PARK</h2>
+                <div class="footer-email-block">
+                    <span class="f-email-text" id="emailAddressText">jpvoice@naver.com</span>
+                    <button class="swiss-copy-btn" id="copyEmailBtn">COPY EMAIL</button>
+                </div>
+            </div>
+
+            <!-- Centered Concept Color TOP Button -->
+            <div class="footer-bottom-action">
+                <button class="back-to-top-btn" id="backToTopBtn" aria-label="Back to Top">
+                    <span>TOP</span>
+                </button>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="projects_data.js?v=20260825_0256"></script>
+    <script src="main.js?v=20260825_0256"></script>
+</body>
+
+</html>
