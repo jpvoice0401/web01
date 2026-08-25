@@ -3595,10 +3595,14 @@ body.modal-open button {
         margin-bottom: 2px !important;
     }
 
-    .cv-name-block .cv-meta-sub div {
+    .cv-name-block .cv-meta-sub div,
+    .cv-name-block .cv-meta-sub a,
+    .cv-name-block .cv-meta-sub span {
         color: #000000 !important;
         font-size: 9pt !important;
         letter-spacing: 0.04em !important;
+        text-decoration: none !important;
+        -webkit-text-fill-color: #000000 !important;
     }
 
     /* 🎨 Artist Statement Print Layout */
