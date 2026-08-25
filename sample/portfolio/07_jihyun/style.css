@@ -2387,8 +2387,8 @@ body.modal-open button {
     letter-spacing: 0.04em;
     word-spacing: 0.25em;
     line-height: 0.95;
-    margin-top: 0;
-    margin-bottom: 1.4rem;
+    margin-top: -0.8rem;
+    margin-bottom: 2.0rem;
     text-align: center;
 }
 
@@ -4994,8 +4994,8 @@ body.modal-open button {
     }
 
     .footer-huge-type {
-        margin-top: 0 !important;
-        margin-bottom: 0.7rem !important;
+        margin-top: -0.5rem !important;
+        margin-bottom: 1.1rem !important;
         font-size: clamp(2.4rem, 11vw, 4.4rem) !important;
         line-height: 0.92 !important;
     }
