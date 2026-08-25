@@ -9,7 +9,7 @@ const ARTIST_I18N_DATA = {
     ko: {
         pageTitle: "ARTIST CV // JI-HYUN PARK",
         headerBadge: "ARTIST CV (FINE ART & MEDIA)",
-        switchGeneralBtn: "ACADEMIC CV로 전환 →",
+        switchGeneralBtn: "SWITCH TO ACADEMIC CV →",
         mainHeading: "ARTIST CV // JI-HYUN PARK",
         subDesc: "박지현 작가 이력서",
         printBtn: "PRINT / SAVE PDF",
