@@ -716,11 +716,11 @@ const ARTIST_I18N_DATA = {
     },
     
     zh: {
-        pageTitle: "ARTIST CV // 朴芝炫 (JI-HYUN PARK)",
+        pageTitle: "ARTIST CV // 朴智賢 (JI-HYUN PARK)",
         headerBadge: "🎨 艺术家简历 (纯艺术与新媒体)",
         switchGeneralBtn: "🏛️ 切换至 学术简历 (ACADEMIC CV) →",
-        mainHeading: "ARTIST CV // 朴芝炫 (JI-HYUN PARK)",
-        subDesc: "朴芝炫 艺术家简历",
+        mainHeading: "ARTIST CV // 朴智賢 (JI-HYUN PARK)",
+        subDesc: "朴智賢 艺术家简历",
         printBtn: "打印 / 保存PDF",
         
         // Quick Filters
@@ -853,7 +853,7 @@ const ARTIST_I18N_DATA = {
                 <div class="cv-ex-year">2023.04</div>
                 <div class="cv-ex-info">
                     <strong>TOGETHER TO GATHER</strong>
-                    <span>ROOM#4 朴芝炫个人展, 新沙大厦 (SINSA HOUSE, 首尔)</span>
+                    <span>ROOM#4 朴智賢个人展, 新沙大厦 (SINSA HOUSE, 首尔)</span>
                 </div>
             </div>
             <div class="cv-exhibit-row">
@@ -866,7 +866,7 @@ const ARTIST_I18N_DATA = {
             <div class="cv-exhibit-row">
                 <div class="cv-ex-year">2022.11</div>
                 <div class="cv-ex-info">
-                    <strong>ATTENTION (朴芝炫个人展)</strong>
+                    <strong>ATTENTION (朴智賢个人展)</strong>
                     <span>画廊企划特展</span>
                 </div>
             </div>
@@ -917,7 +917,7 @@ const ARTIST_I18N_DATA = {
             <div class="cv-exhibit-row">
                 <div class="cv-ex-year">2017.08</div>
                 <div class="cv-ex-info">
-                    <strong>OMG! — 朴芝炫第3次特邀个人展</strong>
+                    <strong>OMG! — 朴智賢第3次特邀个人展</strong>
                     <span>特邀个人展览, Space Artwa</span>
                 </div>
             </div>
@@ -1055,11 +1055,11 @@ const ARTIST_I18N_DATA = {
         pressHeading: "艺术评论与媒体报道 (PRESS & REVIEWS)",
         pressBadge: "学术专访与艺术期刊报道",
         pressListHtml: `
-            <div class="cv-press-item"><span class="cv-press-year">2019</span><span class="cv-press-text"><strong>道峰文化财团</strong> – 村庄剧场‘白胶鞋’ ‘朴芝炫艺术家企划深度专访’</span></div>
-            <div class="cv-press-item"><span class="cv-press-year">2016</span><span class="cv-press-text"><strong>月刊《美术世界》7月号</strong> – 朴芝炫, 第13届新进艺术家发言展大奖得主 深度特辑专访与艺术评论</span></div>
-            <div class="cv-press-item"><span class="cv-press-year">2016</span><span class="cv-press-text"><strong>梨花新闻 &amp; 梨大校报</strong> – 聚焦迈向全球舞台的梨花艺术家 : 大奖得主 朴芝炫</span></div>
-            <div class="cv-press-item"><span class="cv-press-year">2015</span><span class="cv-press-text"><strong>首尔 MBC 电视台</strong> – 晚间新闻 ‘朴芝炫个人展 [ un ] veil’ 深度报道</span></div>
-            <div class="cv-press-item"><span class="cv-press-year">2015</span><span class="cv-press-text"><strong>大田 MBC 电视台</strong> – 早间直播 ‘林立美术馆新进艺术家展大奖候选 朴芝炫’ 出镜专访</span></div>
+            <div class="cv-press-item"><span class="cv-press-year">2019</span><span class="cv-press-text"><strong>道峰文化财团</strong> – 村庄剧场‘白胶鞋’ ‘朴智賢艺术家企划深度专访’</span></div>
+            <div class="cv-press-item"><span class="cv-press-year">2016</span><span class="cv-press-text"><strong>月刊《美术世界》7月号</strong> – 朴智賢, 第13届新进艺术家发言展大奖得主 深度特辑专访与艺术评论</span></div>
+            <div class="cv-press-item"><span class="cv-press-year">2016</span><span class="cv-press-text"><strong>梨花新闻 &amp; 梨大校报</strong> – 聚焦迈向全球舞台的梨花艺术家 : 大奖得主 朴智賢</span></div>
+            <div class="cv-press-item"><span class="cv-press-year">2015</span><span class="cv-press-text"><strong>首尔 MBC 电视台</strong> – 晚间新闻 ‘朴智賢个人展 [ un ] veil’ 深度报道</span></div>
+            <div class="cv-press-item"><span class="cv-press-year">2015</span><span class="cv-press-text"><strong>大田 MBC 电视台</strong> – 早间直播 ‘林立美术馆新进艺术家展大奖候选 朴智賢’ 出镜专访</span></div>
             <div class="cv-press-item"><span class="cv-press-year">2015</span><span class="cv-press-text"><strong>ARTHUB</strong> – 艺术家档案馆焦点艺术家入选</span></div>
             <div class="cv-press-item"><span class="cv-press-year">2008</span><span class="cv-press-text"><strong>Joan Flasch Artists’ Book Collection</strong> – 芝加哥艺术学院永久馆藏数字档案登载</span></div>
             <div class="cv-press-item"><span class="cv-press-year">2003</span><span class="cv-press-text"><strong>Suffolk County Legislature (NY)</strong> – 美国纽约萨福克县议会官方立法决议表彰</span></div>
