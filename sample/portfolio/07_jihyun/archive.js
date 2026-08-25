@@ -658,6 +658,262 @@
     }
 
     // ==============================================================================
+    // ⚡ 9. MANIFESTO PHYSICS TYPOGRAPHY ENGINE (ABOUT BIO INTERACTION)
+    // ==============================================================================
+    function initManifestoPhysicsTypography() {
+        const container = document.getElementById("manifestoPhysicsContainer");
+        const canvas = document.getElementById("manifestoPhysicsCanvas");
+        if (!container || !canvas) return;
+
+        const ctx = canvas.getContext("2d");
+        if (!ctx) return;
+
+        // Structured Paragraph Data with Highlights
+        const PARAGRAPHS = [
+            [
+                { text: "박지현은 예술과 디자인, 기술이 교차하는 자리에서 작업하는 아티스트이자 크리에이티브 디렉터, 그리고 교육자", highlight: true },
+                { text: "입니다.", highlight: false }
+            ],
+            [
+                { text: "생성형 AI가 창작의 조건 자체를 바꾸어 놓은 지금, 기술을 새로운 도구로 받아들이는 데 그치지 않고 ", highlight: false },
+                { text: "그 기술이 만들어 낼 미학과 태도를 함께 묻고 새로운 미학적 가능성을 탐구합니다.", highlight: false }
+            ],
+            [
+                { text: "예술의 질문과 디자인의 실행, 기술의 가능성은 그의 작업 안에서 분리되지 않으며", highlight: true },
+                { text: ", 전통 회화의 물성에 대한 탐구에서 출발하여 ", highlight: false },
+                { text: "개념 미술(Conceptual Art)과 오브제, 인터랙티브 미디어, 생성형 AI", highlight: true },
+                { text: "에 이르기까지 매체의 경계 없이 작업 세계를 확장해왔습니다.", highlight: false }
+            ],
+            [
+                { text: "“매체가 아니라 관점”", highlight: true },
+                { text: "을 중심에 두고, 크리에이티브 디렉터로서 ", highlight: false },
+                { text: "“개념을 구조로, 구조를 경험으로”", highlight: true },
+                { text: " 전환하며 브랜드의 고유한 철학과 서사를 관통하는 비주얼 아이덴티티부터 감각적인 팝업 공간 연출, 출판 에디토리얼, 디지털 미디어 콘텐츠에 이르기까지 전 영역을 유기적인 시각 언어로 통합하여 총괄합니다.", highlight: false }
+            ],
+            [
+                { text: "예술적 통찰이 시장의 언어로 정확히 번역될 때 브랜드는 소비되는 이미지가 아니라 고유한 관점을 갖게 되며, ", highlight: false },
+                { text: "기업 및 지자체와 연계한 산학 프로젝트와 실무 융합 교육", highlight: true },
+                { text: "을 통해 예술과 디자인, 교육이 융합되는 지속 가능한 가치를 창출합니다.", highlight: false }
+            ]
+        ];
+
+        let particles = [];
+        let width = 0;
+        let height = 0;
+        let dpr = window.devicePixelRatio || 1;
+        let mouse = { x: -9999, y: -9999, active: false };
+
+        // Particle Class
+        class GlyphParticle {
+            constructor(char, x, y, isHighlight, groupId) {
+                this.char = char;
+                this.homeX = x;
+                this.homeY = y;
+                this.x = x;
+                this.y = y;
+                this.vx = (Math.random() - 0.5) * 0.5;
+                this.vy = (Math.random() - 0.5) * 0.5;
+                this.rot = 0;
+                this.vRot = 0;
+                this.isHighlight = isHighlight;
+                this.groupId = groupId;
+                this.isBroken = false;
+                this.brokenTime = 0;
+            }
+
+            update(now, mouseX, mouseY, mouseActive) {
+                const repelRadius = 88;
+                const breakRadius = 45;
+                const repelPower = 12.0;
+
+                if (mouseActive) {
+                    const dx = this.x - mouseX;
+                    const dy = this.y - mouseY;
+                    const dist = Math.hypot(dx, dy);
+
+                    if (dist < repelRadius && dist > 0.1) {
+                        const force = Math.pow((repelRadius - dist) / repelRadius, 1.35) * repelPower;
+                        const angle = Math.atan2(dy, dx);
+                        this.vx += Math.cos(angle) * force;
+                        this.vy += Math.sin(angle) * force;
+                        this.vRot += (Math.random() - 0.5) * 0.18;
+
+                        if (dist < breakRadius) {
+                            this.isBroken = true;
+                            this.brokenTime = now;
+                        }
+                    }
+                }
+
+                // 4.5s auto-recovery for broken character groups
+                if (this.isBroken && now - this.brokenTime > 4500) {
+                    this.isBroken = false;
+                }
+
+                // Spring physics back to home position
+                const spring = this.isBroken ? 0.038 : 0.082;
+                const friction = this.isBroken ? 0.88 : 0.82;
+
+                const ax = (this.homeX - this.x) * spring;
+                const ay = (this.homeY - this.y) * spring;
+
+                this.vx = (this.vx + ax) * friction;
+                this.vy = (this.vy + ay) * friction;
+                this.x += this.vx;
+                this.y += this.vy;
+
+                // Rotation damping
+                this.vRot *= 0.85;
+                this.rot += this.vRot;
+                this.rot *= 0.92;
+            }
+
+            draw(ctx, fontSize) {
+                ctx.save();
+                ctx.translate(this.x, this.y);
+                if (Math.abs(this.rot) > 0.005) {
+                    ctx.rotate(this.rot);
+                }
+
+                if (this.isHighlight) {
+                    ctx.font = `700 ${fontSize}px 'Noto Sans KR', 'Inter', sans-serif`;
+                    ctx.fillStyle = this.isBroken ? "#00FFA3" : "#FFFFFF";
+                } else {
+                    ctx.font = `400 ${fontSize}px 'Noto Sans KR', 'Inter', sans-serif`;
+                    ctx.fillStyle = this.isBroken ? "#E5FF00" : "rgba(220, 220, 220, 0.88)";
+                }
+
+                ctx.fillText(this.char, 0, 0);
+                ctx.restore();
+            }
+        }
+
+        // Layout Calculator
+        function buildLayout() {
+            width = container.clientWidth;
+            if (width <= 0) width = 800;
+
+            const isMobile = width < 600;
+            const fontSize = isMobile ? 13.5 : 15.2;
+            const lineHeight = isMobile ? 26 : 29;
+            const paragraphGap = isMobile ? 12 : 14;
+
+            ctx.font = `400 ${fontSize}px 'Noto Sans KR', 'Inter', sans-serif`;
+
+            particles = [];
+            let currentY = fontSize + 6;
+            let groupCounter = 0;
+
+            PARAGRAPHS.forEach((paraSegments) => {
+                let currentX = 0;
+                const maxX = width - 8;
+
+                paraSegments.forEach((segment) => {
+                    const text = segment.text;
+                    const isHighlight = segment.highlight;
+                    const words = text.split(" ");
+
+                    words.forEach((word, wIdx) => {
+                        groupCounter++;
+                        const wordGroupId = groupCounter;
+                        const wordWithSpace = (wIdx < words.length - 1 || text.endsWith(" ")) ? word + " " : word;
+
+                        ctx.font = isHighlight ? `700 ${fontSize}px 'Noto Sans KR', 'Inter', sans-serif` : `400 ${fontSize}px 'Noto Sans KR', 'Inter', sans-serif`;
+                        const wordWidth = ctx.measureText(wordWithSpace).width;
+
+                        // Check word wrap
+                        if (currentX + wordWidth > maxX && currentX > 0) {
+                            currentX = 0;
+                            currentY += lineHeight;
+                        }
+
+                        // Create glyph particles for each character
+                        for (let i = 0; i < wordWithSpace.length; i++) {
+                            const char = wordWithSpace[i];
+                            const charWidth = ctx.measureText(char).width;
+                            const p = new GlyphParticle(char, currentX, currentY, isHighlight, wordGroupId);
+                            particles.push(p);
+                            currentX += charWidth;
+                        }
+                    });
+                });
+
+                currentX = 0;
+                currentY += lineHeight + paragraphGap;
+            });
+
+            height = Math.ceil(currentY + 4);
+            canvas.style.height = `${height}px`;
+            canvas.width = Math.floor(width * dpr);
+            canvas.height = Math.floor(height * dpr);
+            ctx.scale(dpr, dpr);
+        }
+
+        // Animation Loop
+        function animate() {
+            const now = performance.now();
+            ctx.clearRect(0, 0, width, height);
+
+            const isMobile = width < 600;
+            const fontSize = isMobile ? 13.5 : 15.2;
+
+            for (let i = 0; i < particles.length; i++) {
+                const p = particles[i];
+                p.update(now, mouse.x, mouse.y, mouse.active);
+                p.draw(ctx, fontSize);
+            }
+
+            requestAnimationFrame(animate);
+        }
+
+        // Mouse & Touch Tracking
+        function updateMousePos(clientX, clientY) {
+            const rect = canvas.getBoundingClientRect();
+            mouse.x = clientX - rect.left;
+            mouse.y = clientY - rect.top;
+            mouse.active = true;
+        }
+
+        canvas.addEventListener("mousemove", (e) => {
+            updateMousePos(e.clientX, e.clientY);
+        });
+
+        canvas.addEventListener("mouseleave", () => {
+            mouse.active = false;
+            mouse.x = -9999;
+            mouse.y = -9999;
+        });
+
+        canvas.addEventListener("touchstart", (e) => {
+            if (e.touches.length > 0) {
+                updateMousePos(e.touches[0].clientX, e.touches[0].clientY);
+            }
+        }, { passive: true });
+
+        canvas.addEventListener("touchmove", (e) => {
+            if (e.touches.length > 0) {
+                updateMousePos(e.touches[0].clientX, e.touches[0].clientY);
+            }
+        }, { passive: true });
+
+        canvas.addEventListener("touchend", () => {
+            mouse.active = false;
+        });
+
+        let resizeTimer;
+        window.addEventListener("resize", () => {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(() => {
+                buildLayout();
+            }, 150);
+        });
+
+        // Initialize Layout and Start Animation
+        buildLayout();
+        animate();
+    }
+
+    // ==============================================================================
     // 🚀 INITIALIZATION
     // ==============================================================================
     document.addEventListener("DOMContentLoaded", () => {
@@ -670,6 +926,7 @@
         setupBackToTop();
         setupPdfPrint();
         initHashScroll();
+        initManifestoPhysicsTypography();
     });
 
 })();
