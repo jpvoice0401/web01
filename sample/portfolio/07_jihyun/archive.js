@@ -123,7 +123,7 @@
             const videoBadgeHtml = project.youtube
                 ? `<span class="overlay-cat-badge video-badge" style="background:#FF0000; color:#fff; margin-left:6px; font-weight:800;">▶ YOUTUBE SHORTS</span>`
                 : (project.video
-                    ? `<span class="overlay-cat-badge video-badge" style="background:var(--accent-pink, #FF2E93); color:#fff; margin-left:6px;">🎬 MOVIE</span>`
+                    ? `<span class="overlay-cat-badge video-badge" style="background:var(--acid-yellow); color:var(--black); margin-left:6px; font-weight:800;">🎬 MOVIE</span>`
                     : "");
 
             const ctaText = project.youtube ? "WATCH SHORTS ↗" : (project.video ? "WATCH FILM" : "VIEW PROJECT");
