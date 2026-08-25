@@ -735,15 +735,15 @@ const ARTIST_I18N_DATA = {
         switchGeneralBtn: "🏛️ 切换至 学术简历 (ACADEMIC CV) →",
         mainHeading: "ARTIST CV // 朴智賢 (JI-HYUN PARK)",
         subDesc: "朴智賢 艺术家简历",
-        printBtn: "打印 / 保存PDF",
+        printBtn: "PRINT (打印)",
         
         // Quick Filters
-        filterStatement: "艺术家陈述 (STATEMENT)",
-        filterSolo: "个人展览 (SOLO)",
-        filterCollections: "美术馆馆藏 (COLLECTIONS)",
-        filterAwards: "奖项与驻留 (AWARDS)",
-        filterGroup: "群展精选 (GROUP)",
-        filterPress: "艺术评论 (PRESS)",
+        filterStatement: "自述 (STATEMENT)",
+        filterSolo: "个展 (SOLO)",
+        filterCollections: "馆藏 (COLLECTIONS)",
+        filterAwards: "奖项 (AWARDS)",
+        filterGroup: "群展 (GROUP)",
+        filterPress: "评论 (PRESS)",
         
         // Profile
         roleEn: "VISUAL ARTIST · CONCEPTUAL & MEDIA ARTIST",

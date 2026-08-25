@@ -4170,21 +4170,21 @@ body.modal-open button {
 .cv-lang-switcher {
     display: inline-flex;
     align-items: center;
-    gap: 0.45rem;
-    height: 36px;
+    gap: 0.35rem;
+    height: 34px;
     box-sizing: border-box;
 }
 
 .lang-btn {
     font-family: var(--font-mono);
-    font-size: 0.75rem;
+    font-size: 0.74rem;
     font-weight: 700;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.06em;
     color: var(--gray-mid);
     background: #141414;
     border: 1px solid #2A2A2A;
-    padding: 0 1.05rem;
-    height: 36px;
+    padding: 0 0.85rem;
+    height: 34px;
     border-radius: 2px;
     cursor: pointer;
     transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
@@ -4192,38 +4192,36 @@ body.modal-open button {
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
+    white-space: nowrap;
 }
 
 .lang-btn:hover {
     color: var(--white);
     background: #242424;
     border-color: #4A4A4A;
-    transform: translateY(-1px);
 }
 
 .lang-btn.active {
+    color: var(--black);
     background: var(--acid-yellow);
     border-color: var(--acid-yellow);
-    color: var(--black);
-    font-weight: 800;
-    transform: none;
 }
 
 .cv-quick-filters {
     display: flex;
     align-items: center;
-    gap: 0.45rem;
+    gap: 0.35rem;
     flex-wrap: wrap;
 }
 
 .cv-quick-link,
 .cv-print-pdf-btn {
     font-family: var(--font-mono);
-    font-size: 0.74rem;
+    font-size: 0.73rem;
     font-weight: 700;
-    letter-spacing: 0.06em;
-    height: 36px;
-    padding: 0 0.9rem;
+    letter-spacing: 0.04em;
+    height: 34px;
+    padding: 0 0.75rem;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -4232,6 +4230,7 @@ body.modal-open button {
     text-decoration: none;
     transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
     cursor: pointer;
+    white-space: nowrap;
 }
 
 .cv-quick-link {
