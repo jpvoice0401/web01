@@ -1322,42 +1322,76 @@ function initArtistStatementPhysicsTypography() {
         const lineHeightLeft = isMobile ? 26.5 : 29.5;
         const paraGap = isMobile ? 18 : 22;
 
-        const fontLeft = `400 ${fontSizeLeft}px 'Noto Sans KR', 'Inter', sans-serif`;
+        const fontLeft = `400 ${fontSizeLeft}px 'Noto Sans SC', 'Noto Sans KR', 'Inter', sans-serif`;
         const colorLeft = "#E6E6E6";
 
-        // Layout Left Column
-        let curYLeft = fontSizeLeft + 4;
-        leftParas.forEach(pText => {
-            if (!pText) return;
-            ctx.font = fontLeft;
-            const words = pText.split(" ");
-            let curX = 0;
+        function layoutColumnParagraphs(paras, font, color, startX, startY, maxWidth, lineHeight, pGap) {
+            ctx.font = font;
+            let curY = startY;
+            const endX = startX + maxWidth;
 
-            words.forEach((word, wIdx) => {
-                groupCounter++;
-                const wordGroupId = groupCounter;
-                const wordWithSpace = (wIdx < words.length - 1) ? word + " " : word;
-                const wordW = ctx.measureText(wordWithSpace).width;
+            paras.forEach(pText => {
+                if (!pText) return;
+                let curX = startX;
 
-                if (curX + wordW > colWidth && curX > 0) {
-                    curX = 0;
-                    curYLeft += lineHeightLeft;
+                // Smart Tokenizer: CJK characters as individual tokens, Latin words intact
+                const tokens = [];
+                let latinBuffer = "";
+
+                for (let i = 0; i < pText.length; i++) {
+                    const char = pText[i];
+                    const isCJK = /[\u4e00-\u9fff\u3400-\u4dbf\uF900-\uFAFF\u3040-\u30ff]/.test(char);
+
+                    if (isCJK || char === ' ' || char === '\n') {
+                        if (latinBuffer.length > 0) {
+                            tokens.push(latinBuffer);
+                            latinBuffer = "";
+                        }
+                        if (char === ' ') {
+                            if (tokens.length > 0) {
+                                tokens[tokens.length - 1] += " ";
+                            }
+                        } else if (char !== '\n') {
+                            tokens.push(char);
+                        }
+                    } else {
+                        latinBuffer += char;
+                    }
+                }
+                if (latinBuffer.length > 0) {
+                    tokens.push(latinBuffer);
                 }
 
-                for (let i = 0; i < wordWithSpace.length; i++) {
-                    const char = wordWithSpace[i];
-                    const charW = ctx.measureText(char).width;
-                    particles.push(new StatementParticle(char, curX, curYLeft, colorLeft, fontLeft, wordGroupId));
-                    curX += charW;
-                }
+                tokens.forEach(token => {
+                    groupCounter++;
+                    const groupId = groupCounter;
+                    const tokenW = ctx.measureText(token).width;
+
+                    if (curX + tokenW > endX && curX > startX) {
+                        curX = startX;
+                        curY += lineHeight;
+                    }
+
+                    for (let i = 0; i < token.length; i++) {
+                        const char = token[i];
+                        const charW = ctx.measureText(char).width;
+                        particles.push(new StatementParticle(char, curX, curY, color, font, groupId));
+                        curX += charW;
+                    }
+                });
+
+                curY += lineHeight + pGap;
             });
 
-            curYLeft += lineHeightLeft + paraGap;
-        });
+            return curY;
+        }
+
+        // Layout Left Column
+        const endYLeft = layoutColumnParagraphs(leftParas, fontLeft, colorLeft, 0, fontSizeLeft + 4, colWidth, lineHeightLeft, paraGap);
 
         // Layout Right Column
         const rightStartX = isMobile ? 0 : colWidth + colGap;
-        let curYRight = isMobile ? curYLeft + 10 : fontSizeLeft + 4;
+        let curYRight = isMobile ? endYLeft + 10 : fontSizeLeft + 4;
 
         // Tag label
         const tagFont = `700 11.5px 'JetBrains Mono', monospace`;
@@ -1374,39 +1408,12 @@ function initArtistStatementPhysicsTypography() {
 
         const fontSizeRight = isMobile ? 13.5 : 14.8;
         const lineHeightRight = isMobile ? 25.5 : 28.5;
-        const fontRight = `400 ${fontSizeRight}px 'Inter', 'Noto Sans KR', sans-serif`;
+        const fontRight = `400 ${fontSizeRight}px 'Inter', 'Noto Sans SC', 'Noto Sans KR', sans-serif`;
         const colorRight = "#C0C0C0";
 
-        rightParas.forEach(pText => {
-            if (!pText) return;
-            ctx.font = fontRight;
-            const words = pText.split(" ");
-            let curX = rightStartX;
-            const maxRightX = rightStartX + colWidth;
+        const endYRight = layoutColumnParagraphs(rightParas, fontRight, colorRight, rightStartX, curYRight, colWidth, lineHeightRight, paraGap);
 
-            words.forEach((word, wIdx) => {
-                groupCounter++;
-                const wordGroupId = groupCounter;
-                const wordWithSpace = (wIdx < words.length - 1) ? word + " " : word;
-                const wordW = ctx.measureText(wordWithSpace).width;
-
-                if (curX + wordW > maxRightX && curX > rightStartX) {
-                    curX = rightStartX;
-                    curYRight += lineHeightRight;
-                }
-
-                for (let i = 0; i < wordWithSpace.length; i++) {
-                    const char = wordWithSpace[i];
-                    const charW = ctx.measureText(char).width;
-                    particles.push(new StatementParticle(char, curX, curYRight, colorRight, fontRight, wordGroupId));
-                    curX += charW;
-                }
-            });
-
-            curYRight += lineHeightRight + paraGap;
-        });
-
-        height = Math.max(curYLeft, curYRight) + 10;
+        height = Math.max(endYLeft, endYRight) + 10;
         canvas.style.height = `${height}px`;
         canvas.width = Math.floor(width * dpr);
         canvas.height = Math.floor(height * dpr);
