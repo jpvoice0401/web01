@@ -4334,6 +4334,8 @@ body.modal-open button {
     font-size: 0.7rem;
     color: var(--gray-mid);
     letter-spacing: 0.08em;
+}
+
 .statement-physics-wrap {
     position: relative;
     width: 100%;

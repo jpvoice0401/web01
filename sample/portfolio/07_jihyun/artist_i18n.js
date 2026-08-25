@@ -1328,10 +1328,11 @@ function initArtistStatementPhysicsTypography() {
 
     function buildLayout(lang) {
         currentLang = lang || currentLang || 'ko';
-        width = wrap.clientWidth;
-        if (width <= 0) width = 900;
+        width = wrap.clientWidth || 1000;
+        if (width <= 0) width = 1000;
+        const dpr = window.devicePixelRatio || 1;
 
-        const isMobile = width < 800;
+        const isMobile = width < 768;
         const d = ARTIST_I18N_DATA[currentLang] || ARTIST_I18N_DATA.ko;
 
         // Determine left & right column text sources
@@ -1350,15 +1351,16 @@ function initArtistStatementPhysicsTypography() {
         particles = [];
         let groupCounter = 0;
 
-        const colGap = isMobile ? 0 : 40;
+        // Exact 50:50 balanced split
+        const colGap = isMobile ? 0 : 48;
         const colWidth = isMobile ? width : Math.floor((width - colGap) / 2);
 
-        const fontSizeLeft = isMobile ? 13.8 : 15.2;
-        const lineHeightLeft = isMobile ? 26.5 : 29.5;
+        const fontSize = isMobile ? 13.5 : 14.5;
+        const lineHeight = isMobile ? 26.0 : 28.5;
         const paraGap = isMobile ? 18 : 22;
 
-        const fontLeft = `400 ${fontSizeLeft}px 'Noto Sans SC', 'Noto Sans KR', 'Inter', sans-serif`;
-        const colorLeft = "#E6E6E6";
+        const fontLeft = `400 ${fontSize}px 'Noto Sans KR', 'Noto Sans SC', 'Inter', sans-serif`;
+        const colorLeft = "#EAEAEA";
 
         function layoutColumnParagraphs(paras, font, color, startX, startY, maxWidth, lineHeight, pGap) {
             ctx.font = font;
@@ -1421,12 +1423,12 @@ function initArtistStatementPhysicsTypography() {
             return curY;
         }
 
-        // Layout Left Column
-        const endYLeft = layoutColumnParagraphs(leftParas, fontLeft, colorLeft, 0, fontSizeLeft + 4, colWidth, lineHeightLeft, paraGap);
+        // Layout Left Column (50% Width)
+        const endYLeft = layoutColumnParagraphs(leftParas, fontLeft, colorLeft, 0, fontSize + 4, colWidth, lineHeight, paraGap);
 
-        // Layout Right Column
+        // Layout Right Column (50% Width)
         const rightStartX = isMobile ? 0 : colWidth + colGap;
-        let curYRight = isMobile ? endYLeft + 10 : fontSizeLeft + 4;
+        let curYRight = isMobile ? endYLeft + 12 : fontSize + 4;
 
         // Tag label
         const tagFont = `700 11.5px 'JetBrains Mono', monospace`;
@@ -1441,14 +1443,13 @@ function initArtistStatementPhysicsTypography() {
         }
         curYRight += 22;
 
-        const fontSizeRight = isMobile ? 13.5 : 14.8;
-        const lineHeightRight = isMobile ? 25.5 : 28.5;
-        const fontRight = `400 ${fontSizeRight}px 'Inter', 'Noto Sans SC', 'Noto Sans KR', sans-serif`;
-        const colorRight = "#C0C0C0";
+        const fontRight = `400 ${fontSize}px 'Inter', 'Noto Sans KR', 'Noto Sans SC', sans-serif`;
+        const colorRight = "#C8C8C8";
 
-        const endYRight = layoutColumnParagraphs(rightParas, fontRight, colorRight, rightStartX, curYRight, colWidth, lineHeightRight, paraGap);
+        const endYRight = layoutColumnParagraphs(rightParas, fontRight, colorRight, rightStartX, curYRight, colWidth, lineHeight, paraGap);
 
-        height = Math.max(endYLeft, endYRight) + 10;
+        height = Math.max(endYLeft, endYRight) + 12;
+        canvas.style.width = "100%";
         canvas.style.height = `${height}px`;
         canvas.width = Math.floor(width * dpr);
         canvas.height = Math.floor(height * dpr);
@@ -1499,6 +1500,12 @@ function initArtistStatementPhysicsTypography() {
         clearTimeout(resizeTimer);
         resizeTimer = setTimeout(() => buildLayout(currentLang), 150);
     });
+
+    if (document.fonts) {
+        document.fonts.ready.then(() => {
+            buildLayout(currentLang);
+        });
+    }
 
     buildLayout(currentLang);
     animate();
