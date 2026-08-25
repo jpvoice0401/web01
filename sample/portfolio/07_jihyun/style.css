@@ -3332,6 +3332,8 @@ body.modal-open button {
 @page {
     size: A4 portrait;
     margin: 14mm 15mm 15mm 15mm;
+}
+
 /* Screen: hide print-only text blocks */
 .cv-print-only-manifesto,
 .cv-print-only-statement {
