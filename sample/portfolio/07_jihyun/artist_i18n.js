@@ -303,6 +303,13 @@ const ARTIST_I18N_DATA = {
                 </div>
             </div>
             <div class="cv-award-row">
+                <div class="cv-aw-date">2003.03</div>
+                <div class="cv-aw-info">
+                    <strong>1st place of Suffolk County</strong>
+                    <span>The Federal Junior Duck Stamp Art Competition, U.S. F&amp;WS (서퍽 카운티 1위)</span>
+                </div>
+            </div>
+            <div class="cv-award-row">
                 <div class="cv-aw-date">2002.10</div>
                 <div class="cv-aw-info">
                     <strong>Gold Prize</strong>
@@ -656,7 +663,14 @@ const ARTIST_I18N_DATA = {
                 <div class="cv-aw-date">2003.04</div>
                 <div class="cv-aw-info">
                     <strong>1st Place of the State of New York</strong>
-                    <span>The Federal Junior Duck Stamp Art Competition, U.S. F&amp;WS</span>
+                    <span>The Federal Junior Duck Stamp Art Competition, U.S. Fish &amp; Wildlife Service (New York State 1st Place)</span>
+                </div>
+            </div>
+            <div class="cv-award-row">
+                <div class="cv-aw-date">2003.03</div>
+                <div class="cv-aw-info">
+                    <strong>1st Place of Suffolk County</strong>
+                    <span>The Federal Junior Duck Stamp Art Competition, U.S. Fish &amp; Wildlife Service (Suffolk County 1st Place)</span>
                 </div>
             </div>
             <div class="cv-award-row">
@@ -1008,7 +1022,14 @@ const ARTIST_I18N_DATA = {
                 <div class="cv-aw-date">2003.04</div>
                 <div class="cv-aw-info">
                     <strong>纽约州第1名 (1st Place of the State of New York)</strong>
-                    <span>美国联邦青少年鸭票艺术大赛, U.S. F&amp;WS</span>
+                    <span>美国联邦青少年鸭票艺术大赛 (U.S. Fish &amp; Wildlife Service) 纽约州第1名</span>
+                </div>
+            </div>
+            <div class="cv-award-row">
+                <div class="cv-aw-date">2003.03</div>
+                <div class="cv-aw-info">
+                    <strong>萨福克县第1名 (1st Place of Suffolk County)</strong>
+                    <span>美国联邦青少年鸭票艺术大赛 (U.S. Fish &amp; Wildlife Service) 萨福克县第1名</span>
                 </div>
             </div>
             <div class="cv-award-row">
