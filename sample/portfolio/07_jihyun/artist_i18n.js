@@ -71,7 +71,7 @@ const ARTIST_I18N_DATA = {
                 <div class="cv-node-desc">
                     <strong>Fine Art &amp; Visual Communication Design (시카고, 미국)</strong><br>
                     <span style="font-size:0.78rem; color:var(--gray-light); line-height:1.75; display:block; margin-top:4px;">
-                        · Presidential Scholarship for 4 years (4년 총장 전액장학생)<br>
+                        · Presidential Scholarship for 4 years (4년 총장 장학금)<br>
                         · Fred A. Hillbruner Artist’s Book Fellowship 수여
                     </span>
                 </div>
@@ -277,7 +277,7 @@ const ARTIST_I18N_DATA = {
             <div class="cv-award-row">
                 <div class="cv-aw-date">2004 - 2008</div>
                 <div class="cv-aw-info">
-                    <strong>Presidential Scholarship for 4 years (4년 총장 전액 장학금)</strong>
+                    <strong>Presidential Scholarship for 4 years (4년 총장 장학금)</strong>
                     <span>The School of the Art Institute of Chicago (SAIC)</span>
                 </div>
             </div>
@@ -428,7 +428,7 @@ const ARTIST_I18N_DATA = {
                 <div class="cv-node-desc">
                     <strong>Fine Arts &amp; Visual Communication Design (Chicago, USA)</strong><br>
                     <span style="font-size:0.78rem; color:var(--gray-light); line-height:1.75; display:block; margin-top:4px;">
-                        · 4-Year Full Presidential Scholarship Recipient<br>
+                        · 4-Year Presidential Scholarship Recipient<br>
                         · Awarded Fred A. Hillbruner Artist’s Book Fellowship
                     </span>
                 </div>
@@ -634,7 +634,7 @@ const ARTIST_I18N_DATA = {
             <div class="cv-award-row">
                 <div class="cv-aw-date">2004 - 2008</div>
                 <div class="cv-aw-info">
-                    <strong>Presidential Scholarship for 4 Years (Full Tuition)</strong>
+                    <strong>Presidential Scholarship for 4 Years</strong>
                     <span>The School of the Art Institute of Chicago (SAIC)</span>
                 </div>
             </div>
@@ -780,7 +780,7 @@ const ARTIST_I18N_DATA = {
                 <div class="cv-node-desc">
                     <strong>纯艺术与视觉传达设计专业 (美国芝加哥)</strong><br>
                     <span style="font-size:0.78rem; color:var(--gray-light); line-height:1.75; display:block; margin-top:4px;">
-                        · 荣获4年全额校长奖学金 (Presidential Scholarship)<br>
+                        · 荣获4年校长奖学金 (Presidential Scholarship)<br>
                         · 荣获 Fred A. Hillbruner 艺术家书籍特藏奖学金
                     </span>
                 </div>
@@ -986,7 +986,7 @@ const ARTIST_I18N_DATA = {
             <div class="cv-award-row">
                 <div class="cv-aw-date">2004 - 2008</div>
                 <div class="cv-aw-info">
-                    <strong>4年全额校长奖学金 (Presidential Scholarship)</strong>
+                    <strong>4年校长奖学金 (Presidential Scholarship)</strong>
                     <span>美国芝加哥艺术学院 (SAIC)</span>
                 </div>
             </div>
