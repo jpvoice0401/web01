@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABOUT — SELECT PERSPECTIVE // JIHYUN PARK</title>
+    <meta name="description"
+        content="Choose between Artist CV (Galleries & Collectors) and General Academic CV (AX Directing, Academia & Industry).">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;800;900&family=Archivo+Black&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600;700&family=Playfair+Display:ital,wght@1,500;1,600&family=Space+Grotesk:wght@600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css?v=20260826_2000">
+</head>
+
+<body class="about-select-page">
+
+    <!-- 🔘 Inverted Lens Cursor -->
+    <div class="inverted-lens-cursor" id="lensCursor" aria-hidden="true"></div>
+
+    <!-- ============================================== -->
+    <!-- 🧭 TOP HEADER BAR                              -->
+    <!-- ============================================== -->
+    <header class="top-nav-bar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <a href="index.html" class="nav-brand">JI-HYUN PARK</a>
+            </div>
+            <nav class="nav-right" aria-label="Main Navigation">
+                <a href="index.html" class="nav-item-link">HOME</a>
+                <a href="about.html" class="nav-item-link active">ABOUT</a>
+                <a href="archive.html#work" class="nav-item-link">WORK</a>
+                <a href="archive.html#awards" class="nav-item-link">AWARDS</a>
+                <a href="index.html#contact" class="nav-item-link">CONTACT</a>
+                <div class="nav-theme-dots" role="group" aria-label="Color Palette Switcher">
+                    <button class="nav-palette-dot active" data-color="#CEFF00" style="background:#CEFF00;"
+                        title="Acid Lime" aria-label="Acid Lime"></button>
+                    <button class="nav-palette-dot" data-color="#00FFA3" style="background:#00FFA3;"
+                        title="Cyber Emerald" aria-label="Cyber Emerald"></button>
+                    <button class="nav-palette-dot" data-color="#FFFFFF" style="background:#FFFFFF;" title="Pure White"
+                        aria-label="Pure White"></button>
+                    <button class="nav-palette-dot" data-color="#8B5CF6" style="background:#8B5CF6;"
+                        title="Electric Violet" aria-label="Electric Violet"></button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ============================================================================== -->
+    <!-- 🎴 DUAL PERSPECTIVE SELECTOR (Clean Swiss Minimalist Poster)                 -->
+    <!-- ============================================================================== -->
+    <main class="about-select-container">
+
+        <!-- 2-Card Clean Split Grid -->
+        <div class="about-cards-grid">
+
+            <!-- 🎨 CARD 1: ARTIST CV -->
+            <a href="about_artist.html" class="perspective-card card-artist" id="cardArtist" aria-label="View Artist Curriculum Vitae">
+                <div class="card-body">
+                    <div class="card-role-title">ARTIST CV</div>
+
+                    <p class="card-manifesto-clean">
+                        전통 회화의 물성에 대한 탐구에서 출발하여<br>
+                        개념 미술의 구조적 사유를 거쳐,<br>
+                        시대의 기술을 새로운 미학적 질문으로<br>
+                        전환하며 다양한 조형 실험을 펼치는<br>
+                        시각예술가의 작업 세계입니다.
+                    </p>
+
+                    <ul class="card-clean-bullet-list">
+                        <li><strong>Exhibitions</strong></li>
+                        <li><strong>Permanent Collections</strong></li>
+                        <li><strong>Awards &amp; Residency</strong></li>
+                    </ul>
+                </div>
+
+                <div class="card-footer">
+                    <div class="card-cta-btn primary-cta">
+                        <span>VIEW ARTIST CV</span>
+                        <svg class="cta-arrow" viewBox="0 0 24 24" width="18" height="18" fill="none"
+                            stroke="currentColor" stroke-width="2.5">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
+                    </div>
+                </div>
+            </a>
+
+            <!-- 🏛️ CARD 2: ACADEMIC CV -->
+            <a href="about_general.html" class="perspective-card card-general" id="cardGeneral" aria-label="View Academic Curriculum Vitae">
+                <div class="card-body">
+                    <div class="card-role-title">ACADEMIC CV</div>
+
+                    <p class="card-manifesto-clean">
+                        개념을 구조로, 구조를 경험으로 전환하는<br>
+                        크리에이티브 디렉터이자<br>
+                        디자인학 박사, 학술 연구, 대학교육 및<br>
+                        브랜드 비주얼 총괄을 아우르는<br>
+                        교육자로서의 종합 이력입니다.
+                    </p>
+
+                    <ul class="card-clean-bullet-list">
+                        <li><strong>Academic Career</strong></li>
+                        <li><strong>Brand Directing</strong></li>
+                        <li><strong>Major Projects</strong></li>
+                    </ul>
+                </div>
+
+                <div class="card-footer">
+                    <div class="card-cta-btn secondary-cta">
+                        <span>VIEW ACADEMIC CV</span>
+                        <svg class="cta-arrow" viewBox="0 0 24 24" width="18" height="18" fill="none"
+                            stroke="currentColor" stroke-width="2.5">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+
+        <!-- Clean Footer Nav Links -->
+        <div class="about-select-footer">
+            <a href="index.html" class="back-to-home-link">← RETURN TO HOME</a>
+            <a href="archive.html#work" class="direct-archive-link">DIRECT TO WORK ARCHIVE →</a>
+        </div>
+
+        <!-- Compact Copyright Bar -->
+        <div class="footer-copyright-bar" style="margin-top: 2rem;">
+            <p class="copyright-text">©2026 JI-HYUN PARK All Right Reserved</p>
+        </div>
+
+    </main>
+
+    <!-- Scripts -->
+    <script src="main.js"></script>
+</body>
+
+</html>

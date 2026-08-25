@@ -23,4 +23,6 @@ yarn-error.log*
 # Large Presentations, Videos & Temp Files (>100MB)
 *.pptx
 *.ppt
+**/jihyunparkhomepage.mp4
+work_images/bx/jihyunparkhomepage/jihyunparkhomepage.mp4
 sample/portfolio/07_jihyun/work_images/bx/jihyunparkhomepage/jihyunparkhomepage.mp4
