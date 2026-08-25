@@ -8,8 +8,8 @@
 const ARTIST_I18N_DATA = {
     ko: {
         pageTitle: "ARTIST CV // JI-HYUN PARK",
-        headerBadge: "🎨 ARTIST CV (FINE ART & MEDIA)",
-        switchGeneralBtn: "🏛️ ACADEMIC CV로 전환 →",
+        headerBadge: "ARTIST CV (FINE ART & MEDIA)",
+        switchGeneralBtn: "ACADEMIC CV로 전환 →",
         mainHeading: "ARTIST CV // JI-HYUN PARK",
         subDesc: "박지현 작가 이력서",
         printBtn: "PRINT / SAVE PDF",
@@ -372,8 +372,8 @@ const ARTIST_I18N_DATA = {
     
     en: {
         pageTitle: "ARTIST CV // JI-HYUN PARK",
-        headerBadge: "🎨 ARTIST CV (FINE ART & MEDIA)",
-        switchGeneralBtn: "🏛️ SWITCH TO ACADEMIC CV →",
+        headerBadge: "ARTIST CV (FINE ART & MEDIA)",
+        switchGeneralBtn: "SWITCH TO ACADEMIC CV →",
         mainHeading: "ARTIST CV // JI-HYUN PARK",
         subDesc: "Artist CV // Ji-Hyun Park",
         printBtn: "PRINT / SAVE PDF",
@@ -731,8 +731,8 @@ const ARTIST_I18N_DATA = {
     
     zh: {
         pageTitle: "ARTIST CV // 朴智賢 (JI-HYUN PARK)",
-        headerBadge: "🎨 艺术家简历 (纯艺术与新媒体)",
-        switchGeneralBtn: "🏛️ 切换至 学术简历 (ACADEMIC CV) →",
+        headerBadge: "艺术家简历 (纯艺术与新媒体)",
+        switchGeneralBtn: "切换至 学术简历 (ACADEMIC CV) →",
         mainHeading: "ARTIST CV // 朴智賢 (JI-HYUN PARK)",
         subDesc: "朴智賢 艺术家简历",
         printBtn: "PRINT (打印)",
