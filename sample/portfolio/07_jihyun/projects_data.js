@@ -24,10 +24,7 @@ const PORTFOLIO_PROJECTS = [
         "image": "work_images/bx/jihyunparkhomepage/jihyunparkhomepage_thumb.jpg",
         "video": "work_images/bx/jihyunparkhomepage/jihyunparkhomepage_web.mp4",
         "gallery": [
-            "work_images/bx/jihyunparkhomepage/jihyunparkhomepage_thumb.jpg",
-            "work_images/poster/poster00.jpg",
-            "images/hero_portrait.jpg",
-            "work_images/poster/poster01.jpg"
+            "work_images/bx/jihyunparkhomepage/jihyunparkhomepage_thumb.jpg"
         ],
         "tags": [
             "Solo Total Directing",
