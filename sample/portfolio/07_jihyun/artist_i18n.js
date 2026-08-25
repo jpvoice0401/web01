@@ -28,7 +28,7 @@ const ARTIST_I18N_DATA = {
         
         // Statement Heading
         statementHeading: "// ARTIST STATEMENT",
-        statementLangBadge: "KOR · ENG · CHN TRILINGUAL EDITION",
+        statementLangBadge: "KOR · ENG · CHN",
         
         // Statement Body
         statementP1: "작가에게 예술은 현실의 연장선에 있다. 삶을 비추고, 삶의 어떤 면을 다시 해석하는 일이다. 그 해석의 끝에서 작가가 찾는 것은 진리다. 다만 참과 거짓을 가리는 진리는 아니다. 작가에게 진리와 비-진리는 한 장의 동전이다. 앞면을 확정하려고 뒤집는 순간 뒷면이 사라진다. 그래서 작가는 뒤집지 않는다. 어느 쪽으로도 기울지 않은 자리에 작품을 세워두고 물러선다. 도착해야 할 절대정신 같은 것은 상정하지 않는다.",
@@ -392,7 +392,7 @@ const ARTIST_I18N_DATA = {
         
         // Statement Heading
         statementHeading: "// ARTIST STATEMENT",
-        statementLangBadge: "KOR · ENG · CHN TRILINGUAL EDITION",
+        statementLangBadge: "KOR · ENG · CHN",
         
         // Statement Body
         statementP1: "Art is not somewhere apart from life. It runs alongside it, reading some part of it again. At the end of that reading, what I am looking for is truth. Not the kind that sorts right from wrong. Truth and untruth are one coin. Turn it over to settle the face, and the other side is gone. So I don't turn it over. I set the work down where it leans neither way, and step back. There is no final place it is meant to arrive.",
@@ -751,7 +751,7 @@ const ARTIST_I18N_DATA = {
         
         // Statement Heading
         statementHeading: "// 艺术家自述 (ARTIST STATEMENT)",
-        statementLangBadge: "中 · 英 · 韩 三语典藏版本 (TRILINGUAL EDITION)",
+        statementLangBadge: "KOR · ENG · CHN",
         
         // Statement Body
         statementP1: "对艺术家而言，艺术是现实的延伸。它是对生活的映照，也是对生活某一维度的重新诠释。在这场诠释的终点，艺术家所追寻的是真理。然而，这并非判别真伪的真理。对艺术家来说，真理与非真理如同同一枚硬币的两面。当你为了确立正面而翻转硬币的瞬间，背面便已消失。因此，艺术家选择不翻转它。在不偏向任何一方的居中之地，立下作品，而后退步抽身。并不预设任何必须抵达的‘绝对精神’。",
