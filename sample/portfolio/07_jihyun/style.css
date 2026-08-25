@@ -2353,8 +2353,8 @@ body.modal-open button {
     z-index: 10;
     background: transparent;
     border-top: none;
-    padding: 2.2rem 1.5rem 1.5rem 1.5rem;
-    margin-top: 2.5rem;
+    padding: 1.2rem 1.5rem 1.5rem 1.5rem;
+    margin-top: 1.5rem;
 }
 
 .footer-inner-container {
@@ -2376,7 +2376,7 @@ body.modal-open button {
     font-size: 0.85rem;
     font-weight: 700;
     color: var(--acid-yellow);
-    margin-bottom: 1rem;
+    margin-bottom: 0.8rem;
 }
 
 .footer-huge-type {
@@ -2387,7 +2387,8 @@ body.modal-open button {
     letter-spacing: 0.04em;
     word-spacing: 0.25em;
     line-height: 0.95;
-    margin-bottom: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 1.4rem;
     text-align: center;
 }
 
@@ -2399,7 +2400,7 @@ body.modal-open button {
     border: 2px solid var(--acid-yellow);
     padding: 0.7rem 1.6rem;
     margin-top: 0.2rem;
-    margin-bottom: 1.2rem;
+    margin-bottom: 2.4rem;
 }
 
 .f-email-text {
@@ -2430,7 +2431,7 @@ body.modal-open button {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 0;
+    padding-top: 0.2rem;
     margin-top: 0;
 }
 
@@ -2475,8 +2476,8 @@ body.modal-open button {
 .footer-copyright-bar {
     width: 100%;
     text-align: center;
-    padding: 0.6rem 0 0.2rem 0;
-    margin-top: 0.8rem;
+    padding: 0.8rem 0 0.2rem 0;
+    margin-top: 1rem;
     border-top: none;
 }
 
@@ -4982,9 +4983,9 @@ body.modal-open button {
 
     /* 9. Mobile Footer & TOP Button Tight Alignment */
     .poster-footer-section {
-        margin-top: 1rem !important;
-        margin-bottom: 1.2rem !important;
-        padding: 0.8rem 1rem 1.2rem 1rem !important;
+        margin-top: 0.6rem !important;
+        margin-bottom: 1rem !important;
+        padding: 0.6rem 1rem 1.2rem 1rem !important;
     }
 
     .footer-huge-poster-box {
@@ -4993,15 +4994,15 @@ body.modal-open button {
     }
 
     .footer-huge-type {
-        margin-top: 0.2rem !important;
-        margin-bottom: 0.9rem !important;
+        margin-top: 0 !important;
+        margin-bottom: 0.7rem !important;
         font-size: clamp(2.4rem, 11vw, 4.4rem) !important;
         line-height: 0.92 !important;
     }
 
     .footer-email-block {
         margin-top: 0 !important;
-        margin-bottom: 0.7rem !important;
+        margin-bottom: 1.8rem !important;
         padding: 0.55rem 1.1rem !important;
         gap: 0.65rem !important;
         max-width: 100% !important;
@@ -5031,8 +5032,8 @@ body.modal-open button {
 
     .footer-copyright-bar {
         border-top: none !important;
-        padding: 0.4rem 0 0.2rem 0 !important;
-        margin-top: 0.5rem !important;
+        padding: 0.6rem 0 0.2rem 0 !important;
+        margin-top: 0.8rem !important;
     }
 
     /* 10. Mobile Perspective Select Gateway (about.html) */
