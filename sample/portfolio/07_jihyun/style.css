@@ -141,7 +141,7 @@ body.modal-open button {
  * ============================================================================== */
 .content-section {
     max-width: 1720px;
-    margin: 4.5rem auto;
+    margin: 2.5rem auto;
     padding: 0 1.5rem;
     width: 100%;
     box-sizing: border-box;
@@ -1356,8 +1356,12 @@ body.modal-open button {
     position: relative;
     z-index: 10;
     max-width: 1720px;
-    margin: 0 auto 6rem auto;
+    margin: 0 auto 2.5rem auto;
     padding: 0 1.5rem;
+}
+
+#lab.content-section {
+    margin-bottom: 1.2rem;
 }
 
 .lab-top-meta-bar {
@@ -2353,8 +2357,8 @@ body.modal-open button {
     z-index: 10;
     background: transparent;
     border-top: none;
-    padding: 1.2rem 1.5rem 1.5rem 1.5rem;
-    margin-top: 1.5rem;
+    padding: 0.5rem 1.5rem 1.5rem 1.5rem;
+    margin-top: 0.5rem;
 }
 
 .footer-inner-container {
@@ -2376,7 +2380,7 @@ body.modal-open button {
     font-size: 0.85rem;
     font-weight: 700;
     color: var(--acid-yellow);
-    margin-bottom: 0.8rem;
+    margin-bottom: 0.6rem;
 }
 
 .footer-huge-type {
@@ -2387,8 +2391,8 @@ body.modal-open button {
     letter-spacing: 0.04em;
     word-spacing: 0.25em;
     line-height: 0.95;
-    margin-top: -2.0rem;
-    margin-bottom: 2.8rem;
+    margin-top: -1.5rem;
+    margin-bottom: 2.6rem;
     text-align: center;
 }
 
