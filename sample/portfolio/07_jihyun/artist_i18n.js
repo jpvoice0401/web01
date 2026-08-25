@@ -1192,6 +1192,280 @@ function safeSetHtml(selector, html) {
     }
 }
 
+// ==============================================================================
+// ⚡ ARTIST STATEMENT PHYSICS TYPOGRAPHY ENGINE (DUAL-COLUMN ESSAY INTERACTION)
+// ==============================================================================
+let statementPhysicsEngine = null;
+
+function initArtistStatementPhysicsTypography() {
+    const wrap = document.getElementById('statementPhysicsWrap');
+    const canvas = document.getElementById('statementPhysicsCanvas');
+    if (!wrap || !canvas) return;
+
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return;
+
+    let particles = [];
+    let width = 0;
+    let height = 0;
+    let dpr = window.devicePixelRatio || 1;
+    let mouse = { x: -9999, y: -9999, active: false };
+    let currentLang = 'ko';
+
+    class StatementParticle {
+        constructor(char, x, y, color, fontStyle, groupId) {
+            this.char = char;
+            this.homeX = x;
+            this.homeY = y;
+            this.x = x;
+            this.y = y;
+            this.vx = 0;
+            this.vy = 0;
+            this.rot = 0;
+            this.vRot = 0;
+            this.color = color;
+            this.fontStyle = fontStyle;
+            this.groupId = groupId;
+            this.isBroken = false;
+            this.brokenTime = 0;
+        }
+
+        update(now, mouseX, mouseY, mouseActive) {
+            const repelRadius = 90;
+            const breakRadius = 45;
+            const repelPower = 12.0;
+
+            if (mouseActive) {
+                const dx = this.x - mouseX;
+                const dy = this.y - mouseY;
+                const dist = Math.hypot(dx, dy);
+
+                if (dist < repelRadius && dist > 0.1) {
+                    const force = Math.pow((repelRadius - dist) / repelRadius, 1.35) * repelPower;
+                    const angle = Math.atan2(dy, dx);
+                    this.vx += Math.cos(angle) * force;
+                    this.vy += Math.sin(angle) * force;
+                    this.vRot += (Math.random() - 0.5) * 0.18;
+
+                    if (dist < breakRadius) {
+                        this.isBroken = true;
+                        this.brokenTime = now;
+                    }
+                }
+            }
+
+            // 4.5s auto-recovery
+            if (this.isBroken && now - this.brokenTime > 4500) {
+                this.isBroken = false;
+            }
+
+            // Spring back to home position
+            const spring = this.isBroken ? 0.038 : 0.082;
+            const friction = this.isBroken ? 0.88 : 0.82;
+
+            const ax = (this.homeX - this.x) * spring;
+            const ay = (this.homeY - this.y) * spring;
+
+            this.vx = (this.vx + ax) * friction;
+            this.vy = (this.vy + ay) * friction;
+            this.x += this.vx;
+            this.y += this.vy;
+
+            // Rotation damping
+            this.vRot *= 0.85;
+            this.rot += this.vRot;
+            this.rot *= 0.92;
+        }
+
+        draw(ctx) {
+            ctx.save();
+            ctx.translate(this.x, this.y);
+            if (Math.abs(this.rot) > 0.005) {
+                ctx.rotate(this.rot);
+            }
+
+            ctx.font = this.fontStyle;
+            ctx.fillStyle = this.isBroken ? "#00FFA3" : this.color;
+            ctx.fillText(this.char, 0, 0);
+            ctx.restore();
+        }
+    }
+
+    function buildLayout(lang) {
+        currentLang = lang || currentLang || 'ko';
+        width = wrap.clientWidth;
+        if (width <= 0) width = 900;
+
+        const isMobile = width < 800;
+        const d = ARTIST_I18N_DATA[currentLang] || ARTIST_I18N_DATA.ko;
+
+        // Determine left & right column text sources
+        const leftParas = [d.statementP1, d.statementP2, d.statementP3];
+        let rightTag = "ENGLISH (ORIGINAL ESSAY)";
+        let rightParas = [ARTIST_I18N_DATA.en.statementP1, ARTIST_I18N_DATA.en.statementP2, ARTIST_I18N_DATA.en.statementP3];
+
+        if (currentLang === 'en') {
+            rightTag = "KOREAN (ORIGINAL ESSAY)";
+            rightParas = [ARTIST_I18N_DATA.ko.statementP1, ARTIST_I18N_DATA.ko.statementP2, ARTIST_I18N_DATA.ko.statementP3];
+        } else if (currentLang === 'zh') {
+            rightTag = "ENGLISH (PARALLEL)";
+            rightParas = [ARTIST_I18N_DATA.en.statementP1, ARTIST_I18N_DATA.en.statementP2, ARTIST_I18N_DATA.en.statementP3];
+        }
+
+        particles = [];
+        let groupCounter = 0;
+
+        const colGap = isMobile ? 0 : 40;
+        const colWidth = isMobile ? width : Math.floor((width - colGap) / 2);
+
+        const fontSizeLeft = isMobile ? 13.8 : 15.2;
+        const lineHeightLeft = isMobile ? 26.5 : 29.5;
+        const paraGap = isMobile ? 18 : 22;
+
+        const fontLeft = `400 ${fontSizeLeft}px 'Noto Sans KR', 'Inter', sans-serif`;
+        const colorLeft = "#E6E6E6";
+
+        // Layout Left Column
+        let curYLeft = fontSizeLeft + 4;
+        leftParas.forEach(pText => {
+            if (!pText) return;
+            ctx.font = fontLeft;
+            const words = pText.split(" ");
+            let curX = 0;
+
+            words.forEach((word, wIdx) => {
+                groupCounter++;
+                const wordGroupId = groupCounter;
+                const wordWithSpace = (wIdx < words.length - 1) ? word + " " : word;
+                const wordW = ctx.measureText(wordWithSpace).width;
+
+                if (curX + wordW > colWidth && curX > 0) {
+                    curX = 0;
+                    curYLeft += lineHeightLeft;
+                }
+
+                for (let i = 0; i < wordWithSpace.length; i++) {
+                    const char = wordWithSpace[i];
+                    const charW = ctx.measureText(char).width;
+                    particles.push(new StatementParticle(char, curX, curYLeft, colorLeft, fontLeft, wordGroupId));
+                    curX += charW;
+                }
+            });
+
+            curYLeft += lineHeightLeft + paraGap;
+        });
+
+        // Layout Right Column
+        const rightStartX = isMobile ? 0 : colWidth + colGap;
+        let curYRight = isMobile ? curYLeft + 10 : fontSizeLeft + 4;
+
+        // Tag label
+        const tagFont = `700 11.5px 'JetBrains Mono', monospace`;
+        ctx.font = tagFont;
+        groupCounter++;
+        let tagX = rightStartX;
+        for (let i = 0; i < rightTag.length; i++) {
+            const char = rightTag[i];
+            const charW = ctx.measureText(char).width;
+            particles.push(new StatementParticle(char, tagX, curYRight - 4, "#E5FF00", tagFont, groupCounter));
+            tagX += charW;
+        }
+        curYRight += 22;
+
+        const fontSizeRight = isMobile ? 13.5 : 14.8;
+        const lineHeightRight = isMobile ? 25.5 : 28.5;
+        const fontRight = `400 ${fontSizeRight}px 'Inter', 'Noto Sans KR', sans-serif`;
+        const colorRight = "#C0C0C0";
+
+        rightParas.forEach(pText => {
+            if (!pText) return;
+            ctx.font = fontRight;
+            const words = pText.split(" ");
+            let curX = rightStartX;
+            const maxRightX = rightStartX + colWidth;
+
+            words.forEach((word, wIdx) => {
+                groupCounter++;
+                const wordGroupId = groupCounter;
+                const wordWithSpace = (wIdx < words.length - 1) ? word + " " : word;
+                const wordW = ctx.measureText(wordWithSpace).width;
+
+                if (curX + wordW > maxRightX && curX > rightStartX) {
+                    curX = rightStartX;
+                    curYRight += lineHeightRight;
+                }
+
+                for (let i = 0; i < wordWithSpace.length; i++) {
+                    const char = wordWithSpace[i];
+                    const charW = ctx.measureText(char).width;
+                    particles.push(new StatementParticle(char, curX, curYRight, colorRight, fontRight, wordGroupId));
+                    curX += charW;
+                }
+            });
+
+            curYRight += lineHeightRight + paraGap;
+        });
+
+        height = Math.max(curYLeft, curYRight) + 10;
+        canvas.style.height = `${height}px`;
+        canvas.width = Math.floor(width * dpr);
+        canvas.height = Math.floor(height * dpr);
+        ctx.scale(dpr, dpr);
+    }
+
+    function animate() {
+        const now = performance.now();
+        ctx.clearRect(0, 0, width, height);
+
+        for (let i = 0; i < particles.length; i++) {
+            const p = particles[i];
+            p.update(now, mouse.x, mouse.y, mouse.active);
+            p.draw(ctx);
+        }
+
+        requestAnimationFrame(animate);
+    }
+
+    function updateMousePos(clientX, clientY) {
+        const rect = canvas.getBoundingClientRect();
+        mouse.x = clientX - rect.left;
+        mouse.y = clientY - rect.top;
+        mouse.active = true;
+    }
+
+    canvas.addEventListener("mousemove", (e) => updateMousePos(e.clientX, e.clientY));
+    canvas.addEventListener("mouseleave", () => {
+        mouse.active = false;
+        mouse.x = -9999;
+        mouse.y = -9999;
+    });
+
+    canvas.addEventListener("touchstart", (e) => {
+        if (e.touches.length > 0) updateMousePos(e.touches[0].clientX, e.touches[0].clientY);
+    }, { passive: true });
+
+    canvas.addEventListener("touchmove", (e) => {
+        if (e.touches.length > 0) updateMousePos(e.touches[0].clientX, e.touches[0].clientY);
+    }, { passive: true });
+
+    canvas.addEventListener("touchend", () => {
+        mouse.active = false;
+    });
+
+    let resizeTimer;
+    window.addEventListener("resize", () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => buildLayout(currentLang), 150);
+    });
+
+    buildLayout(currentLang);
+    animate();
+
+    return {
+        updateLanguage: (lang) => buildLayout(lang)
+    };
+}
+
 // Initialize on DOM Ready
 document.addEventListener('DOMContentLoaded', () => {
     // Check URL parameter first (e.g. ?lang=en)
@@ -1209,12 +1483,19 @@ document.addEventListener('DOMContentLoaded', () => {
     // Set initial language
     setArtistLanguage(initialLang);
 
+    // Initialize Physics Typography for Statement
+    statementPhysicsEngine = initArtistStatementPhysicsTypography();
+
     // Bind event listeners to language switcher buttons
     document.querySelectorAll('.cv-lang-switcher .lang-btn').forEach(btn => {
         btn.addEventListener('click', (e) => {
             e.preventDefault();
             const lang = btn.dataset.lang;
             setArtistLanguage(lang);
+            if (statementPhysicsEngine && statementPhysicsEngine.updateLanguage) {
+                statementPhysicsEngine.updateLanguage(lang);
+            }
         });
     });
 });
+

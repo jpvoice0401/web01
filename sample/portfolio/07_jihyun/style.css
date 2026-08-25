@@ -4297,6 +4297,22 @@ body.modal-open button {
     font-size: 0.7rem;
     color: var(--gray-mid);
     letter-spacing: 0.08em;
+.statement-physics-wrap {
+    position: relative;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.statement-physics-canvas {
+    display: block;
+    width: 100%;
+    height: auto;
+    user-select: none;
+    cursor: crosshair;
+}
+
+.statement-print-fallback {
+    display: none;
 }
 
 .statement-dual-grid {
