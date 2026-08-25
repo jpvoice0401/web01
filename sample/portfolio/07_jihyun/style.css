@@ -1444,27 +1444,46 @@ body.modal-open button {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 1.5rem;
+    gap: 1.2rem;
+    width: 100%;
 }
 
 .swiss-control-line {
     display: flex;
-    flex-direction: column;
-    gap: 0.4rem;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.2rem;
+    width: 100%;
+    margin-bottom: 0;
 }
 
-.swiss-control-line label {
+.control-label-left {
+    min-width: 110px;
     font-family: var(--font-mono);
-    font-size: 0.8rem;
-    font-weight: 700;
-    color: var(--acid-yellow);
-    display: flex;
-    justify-content: space-between;
+    font-size: 0.82rem;
+    font-weight: 800;
+    color: var(--white);
+    letter-spacing: 0.04em;
+    flex-shrink: 0;
 }
 
 .swiss-control-line input[type="range"] {
+    flex: 1 1 auto;
+    width: 100%;
+    height: 7px;
     accent-color: var(--acid-yellow);
     cursor: pointer;
+    margin: 0;
+}
+
+.control-val-right {
+    min-width: 38px;
+    text-align: right;
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    font-weight: 800;
+    color: var(--acid-yellow);
+    flex-shrink: 0;
 }
 
 .swiss-theme-palette {
