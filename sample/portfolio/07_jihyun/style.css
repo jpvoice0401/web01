@@ -3332,14 +3332,25 @@ body.modal-open button {
 @page {
     size: A4 portrait;
     margin: 14mm 15mm 15mm 15mm;
+/* Screen: hide print-only text blocks */
+.cv-print-only-manifesto,
+.cv-print-only-statement {
+    display: none;
 }
 
 @media print {
 
-    /* 1️⃣ Hide Non-Resume Global UI Elements */
+    /* 1️⃣ Hide Non-Resume Global UI Elements & Interactive Canvases */
     .top-nav-bar,
     .inverted-lens-cursor,
     .background-canvas,
+    .statement-physics-wrap,
+    .statement-physics-canvas,
+    .manifesto-physics-canvas,
+    #statementPhysicsCanvas,
+    #manifestoPhysicsCanvas,
+    .portfolio-sound-toggle-btn,
+    #soundToggleBtn,
     .section-top-bar,
     .lab-top-meta-bar,
     .filter-tab-bar,
@@ -3436,6 +3447,33 @@ body.modal-open button {
         flex-direction: column !important;
         break-inside: avoid !important;
         page-break-inside: avoid !important;
+    }
+
+    /* 📄 Crisp 100% Black Editorial Typography for Print Statements */
+    .cv-print-only-manifesto,
+    .cv-print-only-statement {
+        display: block !important;
+        color: #000000 !important;
+        font-family: 'Noto Sans KR', -apple-system, sans-serif !important;
+        font-size: 9.5pt !important;
+        line-height: 1.65 !important;
+        letter-spacing: -0.01em !important;
+        margin-top: 0.8rem !important;
+        margin-bottom: 1.2rem !important;
+    }
+
+    .cv-print-only-manifesto p,
+    .cv-print-only-statement p {
+        color: #000000 !important;
+        margin-bottom: 0.65rem !important;
+        text-align: justify !important;
+        word-break: keep-all !important;
+    }
+
+    .cv-print-only-manifesto strong,
+    .cv-print-only-statement strong {
+        color: #000000 !important;
+        font-weight: 700 !important;
     }
 
     .cv-profile-header {

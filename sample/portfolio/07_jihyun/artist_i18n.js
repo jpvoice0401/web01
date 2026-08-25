@@ -1139,6 +1139,16 @@ function setArtistLanguage(lang) {
     safeSetText('#txtStatementP2', d.statementP2);
     safeSetText('#txtStatementP3', d.statementP3);
 
+    // Populate Print-Only Statement Block for High-Res Crisp Printing
+    const printStatementEl = document.getElementById('printOnlyStatement');
+    if (printStatementEl) {
+        printStatementEl.innerHTML = `
+            <p>${d.statementP1 || ''}</p>
+            <p>${d.statementP2 || ''}</p>
+            <p>${d.statementP3 || ''}</p>
+        `;
+    }
+
     // Statement Secondary Column in Dual Grid
     if (lang === 'ko') {
         safeSetText('#txtStatementP1_Secondary', ARTIST_I18N_DATA.en.statementP1);
