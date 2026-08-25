@@ -16,29 +16,32 @@ const PORTFOLIO_PROJECTS = [
     {
         "id": "jihyunpark-art-official-web",
         "category": "bx",
-        "categoryName": "BX",
+        "categoryName": "BX & DIGITAL ARCHIVE",
         "title": "JIHYUN PARK — AX VISUAL DIRECTOR · ARTIST · EDUCATOR\n박지현 공식 디지털 아카이브 & 인터랙티브 웹 플랫폼",
-        "subtitle": "스위스 인터내셔널 키네틱 포스터 & 0G 피직스 타이포그래피 다국어 웹 아카이브 구축",
+        "subtitle": "기획 · 비주얼 디자인 · 프론트엔드 인터랙션 개발 1인 총괄 직접 디렉팅 (Solo Directing & Engineering)",
         "year": "2026",
         "client": "JIHYUN PARK STUDIO (www.jihyunpark.art)",
-        "image": "work_images/poster/poster00.jpg",
+        "image": "work_images/bx/jihyunparkhomepage/jihyunparkhomepage_thumb.jpg",
+        "video": "work_images/bx/jihyunparkhomepage/jihyunparkhomepage_web.mp4",
         "gallery": [
+            "work_images/bx/jihyunparkhomepage/jihyunparkhomepage_thumb.jpg",
             "work_images/poster/poster00.jpg",
             "images/hero_portrait.jpg",
-            "work_images/poster/poster01.jpg",
-            "work_images/poster/poster02.jpg"
+            "work_images/poster/poster01.jpg"
         ],
         "tags": [
+            "Solo Total Directing",
+            "Direct Planning & Design",
+            "Full-Stack Frontend Dev",
             "Digital BX",
             "AX (AI Experience)",
             "Web Architecture",
-            "Kinetic Typography",
-            "0G Physics Engine",
+            "0G Physics Typography",
+            "Web Audio Synthesizer",
             "Swiss International Style",
-            "Multilingual (KOR·ENG·CHN)",
-            "Brand Identity"
+            "Multilingual (KOR·ENG·CHN)"
         ],
-        "description": "예술과 디자인, 생성형 AI 기술이 교차하는 아티스트이자 크리에이티브 디렉터 박지현의 공식 디지털 아카이브 및 인터랙티브 웹 플랫폼(www.jihyunpark.art) 구축 프로젝트입니다. 스위스 모던 타이포그래피 미학과 0G 무중력 물리 시뮬레이션, 실시간 반응형 인터랙션, 국·영·중 3개 국어 글로벌 다국어 시스템을 완벽하게 통합 설계 및 개발했습니다.",
+        "description": "박지현 아티스트이자 크리에이티브 디렉터의 브랜드 철학과 예술 세계를 관통하는 공식 디지털 아카이브 및 인터랙티브 웹 플랫폼(www.jihyunpark.art) 구축 프로젝트입니다. 전체 기획부터 정보 구조(IA) 설계, 스위스 모던 타이포그래피 비주얼 시스템, 0G 무중력 물리 인터랙션 엔진, 브라우저 절차적 사운드 신디사이저, 국·영·중 3개 국어 글로벌 다국어 시스템까지 전 과정을 직접 기획하고 디자인하며 개발을 총괄 완수했습니다.",
         "featured": true,
         "link": "http://jihyunpark.art/sample/portfolio/07_jihyun/index.html"
     },
