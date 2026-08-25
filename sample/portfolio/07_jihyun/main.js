@@ -890,6 +890,10 @@
                     const multiplier = g.isBroken ? 22.0 : 8.5; // 폭발하듯 밀려남
                     p.vx += Math.cos(angle) * force * multiplier;
                     p.vy += Math.sin(angle) * force * multiplier;
+
+                    if (window.playInteractiveParticleSound) {
+                        window.playInteractiveParticleSound();
+                    }
                 }
 
                 // 4. 귀환 시스템 (Homing)

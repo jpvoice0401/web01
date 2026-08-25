@@ -757,6 +757,10 @@
                             this.isBroken = true;
                             this.brokenTime = now;
                         }
+
+                        if (window.playInteractiveParticleSound) {
+                            window.playInteractiveParticleSound();
+                        }
                     }
                 }
 
