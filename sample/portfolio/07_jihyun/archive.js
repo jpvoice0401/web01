@@ -693,7 +693,7 @@
             [
                 { text: "“매체가 아니라 관점”", isStrong: true, color: "#FFFFFF" },
                 { text: "을 중심에 두고, 크리에이티브 디렉터로서 ", isStrong: false, color: "rgba(225, 225, 225, 0.88)" },
-                { text: "“개념을 구조로, 구조를 경험으로”", isStrong: true, color: "#00FFA3" },
+                { text: "“개념을 구조로, 구조를 경험으로”", isStrong: true, color: "#E5FF00" },
                 { text: " 전환하며", isStrong: false, color: "rgba(225, 225, 225, 0.88)" }
             ],
             [
@@ -706,7 +706,7 @@
                 { text: "예술적 통찰이 시장의 언어로 정확히 번역될 때 브랜드는 소비되는 이미지가 아니라 고유한 관점을 갖게 되며,", isStrong: false, color: "rgba(225, 225, 225, 0.88)" }
             ],
             [
-                { text: "기업 및 지자체와 연계한 산학 프로젝트와 실무 융합 교육", isStrong: true, color: "#E5FF00" },
+                { text: "기업 및 지자체와 연계한 산학 프로젝트와 실무 융합 교육", isStrong: true, color: "#FFFFFF" },
                 { text: "을 통해 예술과 디자인, 교육이 융합되는 지속 가능한 가치를 창출합니다.", isStrong: false, color: "rgba(225, 225, 225, 0.88)" }
             ]
         ];
@@ -791,7 +791,7 @@
                 }
 
                 ctx.font = this.isStrong ? `700 ${fontSize}px 'Noto Sans KR', 'Inter', sans-serif` : `400 ${fontSize}px 'Noto Sans KR', 'Inter', sans-serif`;
-                ctx.fillStyle = this.isBroken ? "#00FFA3" : this.baseColor;
+                ctx.fillStyle = this.isBroken ? "#E5FF00" : this.baseColor;
                 ctx.fillText(this.char, 0, 0);
                 ctx.restore();
             }
