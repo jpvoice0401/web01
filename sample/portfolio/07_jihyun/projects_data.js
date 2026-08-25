@@ -41,7 +41,7 @@ const PORTFOLIO_PROJECTS = [
             "Swiss International Style",
             "Multilingual (KOR·ENG·CHN)"
         ],
-        "description": "박지현 아티스트이자 크리에이티브 디렉터의 브랜드 철학과 예술 세계를 관통하는 공식 디지털 아카이브 및 인터랙티브 웹 플랫폼(www.jihyunpark.art) 구축 프로젝트입니다. 전체 기획부터 정보 구조(IA) 설계, 스위스 모던 타이포그래피 비주얼 시스템, 0G 무중력 물리 인터랙션 엔진, 브라우저 절차적 사운드 신디사이저, 국·영·중 3개 국어 글로벌 다국어 시스템까지 전 과정을 직접 기획하고 디자인하며 개발을 총괄 완수했습니다.",
+        "description": "예술과 디자인, AI 기술의 융합을 담은 박지현 공식 디지털 아카이브(www.jihyunpark.art)입니다. 인터랙티브 비주얼 시스템부터 글로벌 다국어 웹 플랫폼 구축까지 전 과정을 1인 총괄 직접 기획·디자인·개발했습니다.",
         "featured": true,
         "link": "http://jihyunpark.art/sample/portfolio/07_jihyun/index.html"
     },
