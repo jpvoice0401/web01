@@ -1285,7 +1285,7 @@ function initArtistStatementPhysicsTypography() {
             }
 
             ctx.font = this.fontStyle;
-            ctx.fillStyle = this.isBroken ? "#00FFA3" : this.color;
+            ctx.fillStyle = this.isBroken ? "#E5FF00" : this.color;
             ctx.fillText(this.char, 0, 0);
             ctx.restore();
         }
