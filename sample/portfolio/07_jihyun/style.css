@@ -2353,7 +2353,8 @@ body.modal-open button {
     z-index: 10;
     background: transparent;
     border-top: none;
-    padding: 3rem 1.5rem 3rem 1.5rem;
+    padding: 2.2rem 1.5rem 1.5rem 1.5rem;
+    margin-top: 2.5rem;
 }
 
 .footer-inner-container {
@@ -2363,8 +2364,8 @@ body.modal-open button {
 
 .footer-huge-poster-box {
     text-align: center;
-    padding-bottom: 4rem;
-    border-bottom: 1px solid var(--border-dark);
+    padding-bottom: 0;
+    border-bottom: none;
     background: transparent;
 }
 
@@ -2375,7 +2376,7 @@ body.modal-open button {
     font-size: 0.85rem;
     font-weight: 700;
     color: var(--acid-yellow);
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 .footer-huge-type {
@@ -2386,7 +2387,7 @@ body.modal-open button {
     letter-spacing: 0.04em;
     word-spacing: 0.25em;
     line-height: 0.95;
-    margin-bottom: 2.6rem;
+    margin-bottom: 1.5rem;
     text-align: center;
 }
 
@@ -2396,9 +2397,9 @@ body.modal-open button {
     gap: 1rem;
     background: var(--card-bg);
     border: 2px solid var(--acid-yellow);
-    padding: 0.8rem 1.8rem;
-    margin-top: 0.4rem;
-    margin-bottom: 2.8rem;
+    padding: 0.7rem 1.6rem;
+    margin-top: 0.2rem;
+    margin-bottom: 1.2rem;
 }
 
 .f-email-text {
@@ -2429,7 +2430,8 @@ body.modal-open button {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 0.2rem;
+    padding-top: 0;
+    margin-top: 0;
 }
 
 .back-to-top-btn {
@@ -2438,7 +2440,7 @@ body.modal-open button {
     font-family: var(--font-univers);
     font-weight: 900;
     font-size: 0.88rem;
-    padding: 0.65rem 1.4rem;
+    padding: 0.6rem 1.3rem;
     border: 2px solid transparent;
     cursor: pointer;
     letter-spacing: 0.08em;
@@ -2468,14 +2470,14 @@ body.modal-open button {
 }
 
 /* ==============================================================================
- * 📜 COMPACT FOOTER COPYRIGHT BAR (Slim & Refined)
+ * 📜 COMPACT FOOTER COPYRIGHT BAR (Slim & Refined - No White Line)
  * ============================================================================== */
 .footer-copyright-bar {
     width: 100%;
     text-align: center;
-    padding: 1.2rem 0 0.5rem 0;
-    margin-top: 1.2rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 0.6rem 0 0.2rem 0;
+    margin-top: 0.8rem;
+    border-top: none;
 }
 
 .copyright-text {
@@ -4980,26 +4982,26 @@ body.modal-open button {
 
     /* 9. Mobile Footer & TOP Button Tight Alignment */
     .poster-footer-section {
-        margin-top: 1.2rem !important;
-        margin-bottom: 1.5rem !important;
-        padding: 1rem 1rem 1.8rem 1rem !important;
+        margin-top: 1rem !important;
+        margin-bottom: 1.2rem !important;
+        padding: 0.8rem 1rem 1.2rem 1rem !important;
     }
 
     .footer-huge-poster-box {
-        padding-bottom: 1.2rem !important;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+        padding-bottom: 0 !important;
+        border-bottom: none !important;
     }
 
     .footer-huge-type {
         margin-top: 0.2rem !important;
-        margin-bottom: 1.2rem !important;
+        margin-bottom: 0.9rem !important;
         font-size: clamp(2.4rem, 11vw, 4.4rem) !important;
         line-height: 0.92 !important;
     }
 
     .footer-email-block {
         margin-top: 0 !important;
-        margin-bottom: 0.8rem !important;
+        margin-bottom: 0.7rem !important;
         padding: 0.55rem 1.1rem !important;
         gap: 0.65rem !important;
         max-width: 100% !important;
@@ -5018,13 +5020,19 @@ body.modal-open button {
     }
 
     .footer-bottom-action {
-        padding-top: 0.8rem !important;
+        padding-top: 0 !important;
         margin-top: 0 !important;
     }
 
     .back-to-top-btn {
-        padding: 0.5rem 1.2rem !important;
-        font-size: 0.78rem !important;
+        padding: 0.45rem 1.1rem !important;
+        font-size: 0.76rem !important;
+    }
+
+    .footer-copyright-bar {
+        border-top: none !important;
+        padding: 0.4rem 0 0.2rem 0 !important;
+        margin-top: 0.5rem !important;
     }
 
     /* 10. Mobile Perspective Select Gateway (about.html) */
