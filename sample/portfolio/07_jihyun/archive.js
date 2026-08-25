@@ -668,32 +668,46 @@
         const ctx = canvas.getContext("2d");
         if (!ctx) return;
 
-        // Structured Paragraph Data with Highlights
-        const PARAGRAPHS = [
+        // Exact 10-Line Editorial Narrative Structure
+        const MANIFESTO_LINES = [
             [
-                { text: "박지현은 예술과 디자인, 기술이 교차하는 자리에서 작업하는 아티스트이자 크리에이티브 디렉터, 그리고 교육자", highlight: true },
-                { text: "입니다.", highlight: false }
+                { text: "박지현은 예술과 디자인, 기술이 교차하는 자리에서 작업하는 아티스트이자 크리에이티브 디렉터, 그리고 교육자", isStrong: true, color: "#FFFFFF" },
+                { text: "입니다.", isStrong: false, color: "rgba(225, 225, 225, 0.88)" }
             ],
             [
-                { text: "생성형 AI가 창작의 조건 자체를 바꾸어 놓은 지금, 기술을 새로운 도구로 받아들이는 데 그치지 않고 ", highlight: false },
-                { text: "그 기술이 만들어 낼 미학과 태도를 함께 묻고 새로운 미학적 가능성을 탐구합니다.", highlight: false }
+                { text: "생성형 AI가 창작의 조건 자체를 바꾸어 놓은 지금, 기술을 새로운 도구로 받아들이는 데 그치지 않고", isStrong: false, color: "rgba(225, 225, 225, 0.88)" }
             ],
             [
-                { text: "예술의 질문과 디자인의 실행, 기술의 가능성은 그의 작업 안에서 분리되지 않으며", highlight: true },
-                { text: ", 전통 회화의 물성에 대한 탐구에서 출발하여 ", highlight: false },
-                { text: "개념 미술(Conceptual Art)과 오브제, 인터랙티브 미디어, 생성형 AI", highlight: true },
-                { text: "에 이르기까지 매체의 경계 없이 작업 세계를 확장해왔습니다.", highlight: false }
+                { text: "그 기술이 만들어 낼 미학과 태도를 함께 묻고 새로운 미학적 가능성을 탐구합니다.", isStrong: false, color: "rgba(225, 225, 225, 0.88)" }
             ],
             [
-                { text: "“매체가 아니라 관점”", highlight: true },
-                { text: "을 중심에 두고, 크리에이티브 디렉터로서 ", highlight: false },
-                { text: "“개념을 구조로, 구조를 경험으로”", highlight: true },
-                { text: " 전환하며 브랜드의 고유한 철학과 서사를 관통하는 비주얼 아이덴티티부터 감각적인 팝업 공간 연출, 출판 에디토리얼, 디지털 미디어 콘텐츠에 이르기까지 전 영역을 유기적인 시각 언어로 통합하여 총괄합니다.", highlight: false }
+                { text: "예술의 질문과 디자인의 실행, 기술의 가능성은 그의 작업 안에서 분리되지 않으며", isStrong: true, color: "#FFFFFF" },
+                { text: ", 전통 회화의 물성에 대한 탐구에서 출발하여", isStrong: false, color: "rgba(225, 225, 225, 0.88)" }
             ],
             [
-                { text: "예술적 통찰이 시장의 언어로 정확히 번역될 때 브랜드는 소비되는 이미지가 아니라 고유한 관점을 갖게 되며, ", highlight: false },
-                { text: "기업 및 지자체와 연계한 산학 프로젝트와 실무 융합 교육", highlight: true },
-                { text: "을 통해 예술과 디자인, 교육이 융합되는 지속 가능한 가치를 창출합니다.", highlight: false }
+                { text: "개념 미술(Conceptual Art)과 오브제", isStrong: true, color: "#FFFFFF" },
+                { text: ", 인터랙티브 미디어, ", isStrong: false, color: "rgba(225, 225, 225, 0.88)" },
+                { text: "생성형 AI", isStrong: true, color: "#FFFFFF" },
+                { text: "에 이르기까지 매체의 경계 없이 작업 세계를 확장해왔습니다.", isStrong: false, color: "rgba(225, 225, 225, 0.88)" }
+            ],
+            [
+                { text: "“매체가 아니라 관점”", isStrong: true, color: "#FFFFFF" },
+                { text: "을 중심에 두고, 크리에이티브 디렉터로서 ", isStrong: false, color: "rgba(225, 225, 225, 0.88)" },
+                { text: "“개념을 구조로, 구조를 경험으로”", isStrong: true, color: "#00FFA3" },
+                { text: " 전환하며", isStrong: false, color: "rgba(225, 225, 225, 0.88)" }
+            ],
+            [
+                { text: "브랜드의 고유한 철학과 서사를 관통하는 비주얼 아이덴티티부터 감각적인 팝업 공간 연출,", isStrong: false, color: "rgba(225, 225, 225, 0.88)" }
+            ],
+            [
+                { text: "출판 에디토리얼, 디지털 미디어 콘텐츠에 이르기까지 전 영역을 유기적인 시각 언어로 통합하여 총괄합니다.", isStrong: false, color: "rgba(225, 225, 225, 0.88)" }
+            ],
+            [
+                { text: "예술적 통찰이 시장의 언어로 정확히 번역될 때 브랜드는 소비되는 이미지가 아니라 고유한 관점을 갖게 되며,", isStrong: false, color: "rgba(225, 225, 225, 0.88)" }
+            ],
+            [
+                { text: "기업 및 지자체와 연계한 산학 프로젝트와 실무 융합 교육", isStrong: true, color: "#E5FF00" },
+                { text: "을 통해 예술과 디자인, 교육이 융합되는 지속 가능한 가치를 창출합니다.", isStrong: false, color: "rgba(225, 225, 225, 0.88)" }
             ]
         ];
 
@@ -705,26 +719,27 @@
 
         // Particle Class
         class GlyphParticle {
-            constructor(char, x, y, isHighlight, groupId) {
+            constructor(char, x, y, isStrong, baseColor, groupId) {
                 this.char = char;
                 this.homeX = x;
                 this.homeY = y;
                 this.x = x;
                 this.y = y;
-                this.vx = (Math.random() - 0.5) * 0.5;
-                this.vy = (Math.random() - 0.5) * 0.5;
+                this.vx = 0;
+                this.vy = 0;
                 this.rot = 0;
                 this.vRot = 0;
-                this.isHighlight = isHighlight;
+                this.isStrong = isStrong;
+                this.baseColor = baseColor;
                 this.groupId = groupId;
                 this.isBroken = false;
                 this.brokenTime = 0;
             }
 
             update(now, mouseX, mouseY, mouseActive) {
-                const repelRadius = 88;
-                const breakRadius = 45;
-                const repelPower = 12.0;
+                const repelRadius = 92;
+                const breakRadius = 48;
+                const repelPower = 12.5;
 
                 if (mouseActive) {
                     const dx = this.x - mouseX;
@@ -750,7 +765,7 @@
                     this.isBroken = false;
                 }
 
-                // Spring physics back to home position
+                // Smooth damped spring back to home position
                 const spring = this.isBroken ? 0.038 : 0.082;
                 const friction = this.isBroken ? 0.88 : 0.82;
 
@@ -775,42 +790,37 @@
                     ctx.rotate(this.rot);
                 }
 
-                if (this.isHighlight) {
-                    ctx.font = `700 ${fontSize}px 'Noto Sans KR', 'Inter', sans-serif`;
-                    ctx.fillStyle = this.isBroken ? "#00FFA3" : "#FFFFFF";
-                } else {
-                    ctx.font = `400 ${fontSize}px 'Noto Sans KR', 'Inter', sans-serif`;
-                    ctx.fillStyle = this.isBroken ? "#E5FF00" : "rgba(220, 220, 220, 0.88)";
-                }
-
+                ctx.font = this.isStrong ? `700 ${fontSize}px 'Noto Sans KR', 'Inter', sans-serif` : `400 ${fontSize}px 'Noto Sans KR', 'Inter', sans-serif`;
+                ctx.fillStyle = this.isBroken ? "#00FFA3" : this.baseColor;
                 ctx.fillText(this.char, 0, 0);
                 ctx.restore();
             }
         }
 
-        // Layout Calculator
+        // Layout Calculator (Strictly preserving 10-line editorial rhythm with spacious metrics)
         function buildLayout() {
             width = container.clientWidth;
-            if (width <= 0) width = 800;
+            if (width <= 0) width = 900;
 
-            const isMobile = width < 600;
-            const fontSize = isMobile ? 13.5 : 15.2;
-            const lineHeight = isMobile ? 26 : 29;
-            const paragraphGap = isMobile ? 12 : 14;
+            const isMobile = width < 768;
+            const fontSize = isMobile ? 13.8 : 16.0;
+            const lineHeight = isMobile ? 27.5 : 33.5;
+            const letterSpacing = isMobile ? 0.2 : 0.45;
 
             ctx.font = `400 ${fontSize}px 'Noto Sans KR', 'Inter', sans-serif`;
 
             particles = [];
-            let currentY = fontSize + 6;
+            let currentY = fontSize + 8;
             let groupCounter = 0;
 
-            PARAGRAPHS.forEach((paraSegments) => {
+            MANIFESTO_LINES.forEach((lineSegments) => {
                 let currentX = 0;
-                const maxX = width - 8;
+                const maxX = width - 10;
 
-                paraSegments.forEach((segment) => {
+                lineSegments.forEach((segment) => {
                     const text = segment.text;
-                    const isHighlight = segment.highlight;
+                    const isStrong = segment.isStrong;
+                    const baseColor = segment.color;
                     const words = text.split(" ");
 
                     words.forEach((word, wIdx) => {
@@ -818,31 +828,32 @@
                         const wordGroupId = groupCounter;
                         const wordWithSpace = (wIdx < words.length - 1 || text.endsWith(" ")) ? word + " " : word;
 
-                        ctx.font = isHighlight ? `700 ${fontSize}px 'Noto Sans KR', 'Inter', sans-serif` : `400 ${fontSize}px 'Noto Sans KR', 'Inter', sans-serif`;
-                        const wordWidth = ctx.measureText(wordWithSpace).width;
+                        ctx.font = isStrong ? `700 ${fontSize}px 'Noto Sans KR', 'Inter', sans-serif` : `400 ${fontSize}px 'Noto Sans KR', 'Inter', sans-serif`;
+                        const wordWidth = ctx.measureText(wordWithSpace).width + (wordWithSpace.length * letterSpacing);
 
-                        // Check word wrap
+                        // If screen is too narrow (mobile wrap)
                         if (currentX + wordWidth > maxX && currentX > 0) {
                             currentX = 0;
                             currentY += lineHeight;
                         }
 
-                        // Create glyph particles for each character
+                        // Create glyph particle for each character
                         for (let i = 0; i < wordWithSpace.length; i++) {
                             const char = wordWithSpace[i];
-                            const charWidth = ctx.measureText(char).width;
-                            const p = new GlyphParticle(char, currentX, currentY, isHighlight, wordGroupId);
+                            const charWidth = ctx.measureText(char).width + letterSpacing;
+                            const p = new GlyphParticle(char, currentX, currentY, isStrong, baseColor, wordGroupId);
                             particles.push(p);
                             currentX += charWidth;
                         }
                     });
                 });
 
+                // Next line in 10-line layout
                 currentX = 0;
-                currentY += lineHeight + paragraphGap;
+                currentY += lineHeight;
             });
 
-            height = Math.ceil(currentY + 4);
+            height = Math.ceil(currentY + 12);
             canvas.style.height = `${height}px`;
             canvas.width = Math.floor(width * dpr);
             canvas.height = Math.floor(height * dpr);
@@ -854,8 +865,8 @@
             const now = performance.now();
             ctx.clearRect(0, 0, width, height);
 
-            const isMobile = width < 600;
-            const fontSize = isMobile ? 13.5 : 15.2;
+            const isMobile = width < 768;
+            const fontSize = isMobile ? 13.8 : 16.0;
 
             for (let i = 0; i < particles.length; i++) {
                 const p = particles[i];
