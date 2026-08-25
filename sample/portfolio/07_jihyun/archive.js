@@ -559,23 +559,58 @@
     // ==============================================================================
     // 📋 5. COPY EMAIL & TOP BUTTON
     // ==============================================================================
+    window.copyEmailAddress = function(btnElement) {
+        const email = document.getElementById("emailAddressText")?.textContent?.trim() || "jpvoice@naver.com";
+        const btn = btnElement || document.getElementById("copyEmailBtn");
+
+        function showSuccess() {
+            if (btn) {
+                const origText = btn.textContent;
+                btn.textContent = "COPIED!";
+                btn.style.background = "#00FFA3";
+                btn.style.color = "#000";
+                setTimeout(() => {
+                    btn.textContent = origText || "COPY EMAIL";
+                    btn.style.background = "";
+                    btn.style.color = "";
+                }, 2000);
+            }
+        }
+
+        function fallbackCopy() {
+            try {
+                const textArea = document.createElement("textarea");
+                textArea.value = email;
+                textArea.style.position = "fixed";
+                textArea.style.left = "-999999px";
+                textArea.style.top = "-999999px";
+                textArea.setAttribute("readonly", "");
+                document.body.appendChild(textArea);
+                textArea.focus();
+                textArea.select();
+                const successful = document.execCommand('copy');
+                document.body.removeChild(textArea);
+                if (successful) {
+                    showSuccess();
+                } else {
+                    prompt("이메일 주소를 복사하세요 (Ctrl+C):", email);
+                }
+            } catch (err) {
+                prompt("이메일 주소를 복사하세요 (Ctrl+C):", email);
+            }
+        }
+
+        if (navigator.clipboard && window.isSecureContext) {
+            navigator.clipboard.writeText(email).then(showSuccess).catch(fallbackCopy);
+        } else {
+            fallbackCopy();
+        }
+    };
+
     function setupCopyEmail() {
         const copyBtn = document.getElementById("copyEmailBtn");
-        const emailText = document.getElementById("emailAddressText")?.textContent || "jpvoice@naver.com";
-
         if (copyBtn) {
-            copyBtn.addEventListener("click", () => {
-                navigator.clipboard.writeText(emailText).then(() => {
-                    copyBtn.textContent = "COPIED!";
-                    copyBtn.style.background = "#00FFA3";
-                    setTimeout(() => {
-                        copyBtn.textContent = "COPY EMAIL";
-                        copyBtn.style.background = "";
-                    }, 2000);
-                }).catch(() => {
-                    alert("이메일: " + emailText);
-                });
-            });
+            copyBtn.addEventListener("click", () => window.copyEmailAddress(copyBtn));
         }
     }
 
