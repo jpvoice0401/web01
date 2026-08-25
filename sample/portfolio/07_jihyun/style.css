@@ -4956,6 +4956,55 @@ body.modal-open button {
         padding: 7px 13px;
         font-size: 0.72rem;
     }
+
+    /* 9. Mobile Footer & TOP Button Tight Alignment */
+    .poster-footer-section {
+        margin-top: 1.2rem !important;
+        margin-bottom: 1.5rem !important;
+        padding: 1rem 1rem 1.8rem 1rem !important;
+    }
+
+    .footer-huge-poster-box {
+        padding-bottom: 1.2rem !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+    }
+
+    .footer-huge-type {
+        margin-top: 0.2rem !important;
+        margin-bottom: 1.2rem !important;
+        font-size: clamp(2.4rem, 11vw, 4.4rem) !important;
+        line-height: 0.92 !important;
+    }
+
+    .footer-email-block {
+        margin-top: 0 !important;
+        margin-bottom: 0.8rem !important;
+        padding: 0.55rem 1.1rem !important;
+        gap: 0.65rem !important;
+        max-width: 100% !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+    }
+
+    .f-email-text {
+        font-size: clamp(0.88rem, 3.8vw, 1.1rem) !important;
+        letter-spacing: 0.06em !important;
+    }
+
+    .swiss-copy-btn {
+        font-size: 0.72rem !important;
+        padding: 0.35rem 0.7rem !important;
+    }
+
+    .footer-bottom-action {
+        padding-top: 0.8rem !important;
+        margin-top: 0 !important;
+    }
+
+    .back-to-top-btn {
+        padding: 0.5rem 1.2rem !important;
+        font-size: 0.78rem !important;
+    }
 }
 
 /* Extra small devices (max-width: 420px) */
