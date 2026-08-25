@@ -131,7 +131,7 @@ const ARTIST_I18N_DATA = {
         
         // Module 2: Solo Shows
         soloHeading: "SOLO EXHIBITIONS",
-        soloBadge: "NEW YORK · SEOUL · JINGDEZHEN",
+        soloBadge: "개인전",
         soloCol1Html: `
             <div class="cv-exhibit-row">
                 <div class="cv-ex-year">2024.07</div>
@@ -495,7 +495,7 @@ const ARTIST_I18N_DATA = {
         
         // Module 2: Solo Shows
         soloHeading: "SOLO EXHIBITIONS",
-        soloBadge: "NEW YORK · SEOUL · JINGDEZHEN",
+        soloBadge: "SOLO EXHIBITIONS",
         soloCol1Html: `
             <div class="cv-exhibit-row">
                 <div class="cv-ex-year">2024.07</div>
@@ -853,8 +853,8 @@ const ARTIST_I18N_DATA = {
         `,
         
         // Module 2: Solo Shows
-        soloHeading: "个人展览历程 (SOLO EXHIBITIONS)",
-        soloBadge: "纽约 · 首尔 · 景德镇 (NEW YORK · SEOUL · JINGDEZHEN)",
+        soloHeading: "个展 (SOLO EXHIBITIONS)",
+        soloBadge: "个展",
         soloCol1Html: `
             <div class="cv-exhibit-row">
                 <div class="cv-ex-year">2024.07</div>
