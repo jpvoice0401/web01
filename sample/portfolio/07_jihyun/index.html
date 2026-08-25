@@ -145,8 +145,7 @@
                     <h3 class="lab-main-title">GENERATIVE VIBE LAB</h3>
                 </div>
                 <p class="lab-lead-text">
-                    마우스 및 터치 움직임에 유기적으로 반응하는 실시간 캔버스 파티클 시스템입니다.<br>
-                    아래 컨트롤러로 직접 시각 변수를 조작해보세요.
+                    마우스 및 터치 움직임에 유기적으로 반응하는 실시간 캔버스 파티클 시스템입니다.
                 </p>
                 <div class="lab-metric-pills">
                     <div class="m-pill"><span class="m-lbl">FPS:</span> <span class="m-val" id="labFpsVal">60.0</span></div>
@@ -157,13 +156,15 @@
 
             <div class="lab-right-controls">
                 <div class="swiss-control-line">
-                    <label for="sliderParticleCount">DENSITY: <span id="sliderParticleCountText">85</span></label>
+                    <span class="control-label-left">DENSITY:</span>
                     <input type="range" id="sliderParticleCount" min="20" max="137" value="85">
+                    <span class="control-val-right" id="sliderParticleCountText">85</span>
                 </div>
 
                 <div class="swiss-control-line">
-                    <label for="sliderSpeed">TURBULENCE: <span id="sliderSpeedText">1.0</span></label>
+                    <span class="control-label-left">TURBULENCE:</span>
                     <input type="range" id="sliderSpeed" min="0.2" max="3.0" step="0.1" value="1.0">
+                    <span class="control-val-right" id="sliderSpeedText">1.0</span>
                 </div>
             </div>
         </div>
