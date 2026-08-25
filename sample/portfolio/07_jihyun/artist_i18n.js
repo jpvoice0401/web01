@@ -107,7 +107,7 @@ const ARTIST_I18N_DATA = {
                 <div class="cv-aw-date">2008</div>
                 <div class="cv-aw-info">
                     <strong>Joan Flasch Artists' Book Collection, SAIC</strong>
-                    <span>시카고예술대학 아티스트 북 컬렉션 영구 소장 및 글로벌 디지털 아카이브 등재</span>
+                    <span>시카고예술대학 아티스트 북 컬렉션 영구 소장 (Chicago, USA)</span>
                 </div>
             </div>
         `,
@@ -471,7 +471,7 @@ const ARTIST_I18N_DATA = {
                 <div class="cv-aw-date">2008</div>
                 <div class="cv-aw-info">
                     <strong>Joan Flasch Artists' Book Collection, SAIC</strong>
-                    <span>The School of the Art Institute of Chicago Permanent Collection &amp; Global Digital Archive (Chicago, USA)</span>
+                    <span>The School of the Art Institute of Chicago Permanent Collection (Chicago, USA)</span>
                 </div>
             </div>
         `,
@@ -830,7 +830,7 @@ const ARTIST_I18N_DATA = {
                 <div class="cv-aw-date">2008</div>
                 <div class="cv-aw-info">
                     <strong>芝加哥艺术学院 Joan Flasch 艺术家书籍特藏 (SAIC)</strong>
-                    <span>美国芝加哥艺术学院艺术家书籍永久馆藏与数字档案馆载 (美国芝加哥)</span>
+                    <span>美国芝加哥艺术学院艺术家书籍永久馆藏 (美国芝加哥)</span>
                 </div>
             </div>
         `,
