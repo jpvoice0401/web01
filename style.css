@@ -4699,6 +4699,24 @@ body.modal-open button {
         box-sizing: border-box !important;
     }
 
+    /* 📱 Micro-Screens (iPhone SE, Small Fold Covers <= 360px) */
+    @media (max-width: 360px) {
+        .nav-brand {
+            font-size: 1.1rem !important;
+        }
+        .nav-item-link {
+            font-size: 0.72rem !important;
+            letter-spacing: 0.02em !important;
+        }
+        .nav-theme-dots {
+            gap: 0.4rem !important;
+        }
+        .nav-palette-dot {
+            width: 13px !important;
+            height: 13px !important;
+        }
+    }
+
     .poster-top-block {
         padding: 1.2rem 0.9rem;
     }
