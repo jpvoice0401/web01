@@ -686,8 +686,8 @@
             ],
             [
                 { text: "개념 미술(Conceptual Art)과 오브제", isStrong: true, color: "#FFFFFF" },
-                { text: ", 인터랙티브 미디어, ", isStrong: false, color: "rgba(225, 225, 225, 0.88)" },
-                { text: "생성형 AI", isStrong: true, color: "#FFFFFF" },
+                { text: ", 인터랙티브 미디어아트, ", isStrong: false, color: "rgba(225, 225, 225, 0.88)" },
+                { text: "생성형 AI와 바이브 코딩(Vibe Coding)", isStrong: true, color: "#FFFFFF" },
                 { text: "에 이르기까지 매체의 경계 없이 작업 세계를 확장해왔습니다.", isStrong: false, color: "rgba(225, 225, 225, 0.88)" }
             ],
             [
