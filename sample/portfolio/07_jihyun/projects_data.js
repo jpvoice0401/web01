@@ -14,6 +14,35 @@
 
 const PORTFOLIO_PROJECTS = [
     {
+        "id": "jihyunpark-art-official-web",
+        "category": "bx",
+        "categoryName": "BX",
+        "title": "JIHYUN PARK — AX VISUAL DIRECTOR · ARTIST · EDUCATOR\n박지현 공식 디지털 아카이브 & 인터랙티브 웹 플랫폼",
+        "subtitle": "스위스 인터내셔널 키네틱 포스터 & 0G 피직스 타이포그래피 다국어 웹 아카이브 구축",
+        "year": "2026",
+        "client": "JIHYUN PARK STUDIO (www.jihyunpark.art)",
+        "image": "work_images/poster/poster00.jpg",
+        "gallery": [
+            "work_images/poster/poster00.jpg",
+            "images/hero_portrait.jpg",
+            "work_images/poster/poster01.jpg",
+            "work_images/poster/poster02.jpg"
+        ],
+        "tags": [
+            "Digital BX",
+            "AX (AI Experience)",
+            "Web Architecture",
+            "Kinetic Typography",
+            "0G Physics Engine",
+            "Swiss International Style",
+            "Multilingual (KOR·ENG·CHN)",
+            "Brand Identity"
+        ],
+        "description": "예술과 디자인, 생성형 AI 기술이 교차하는 아티스트이자 크리에이티브 디렉터 박지현의 공식 디지털 아카이브 및 인터랙티브 웹 플랫폼(www.jihyunpark.art) 구축 프로젝트입니다. 스위스 모던 타이포그래피 미학과 0G 무중력 물리 시뮬레이션, 실시간 반응형 인터랙션, 국·영·중 3개 국어 글로벌 다국어 시스템을 완벽하게 통합 설계 및 개발했습니다.",
+        "featured": true,
+        "link": "http://jihyunpark.art/sample/portfolio/07_jihyun/index.html"
+    },
+    {
         "id": "hansei-univ-web-bx",
         "category": "bx",
         "categoryName": "BX",
