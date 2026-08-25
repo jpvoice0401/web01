@@ -20,7 +20,7 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Large Presentations, Videos & Temp Files
+# Large Presentations, Videos & Temp Files (>100MB)
 *.pptx
 *.ppt
-sample/portfolio/07_jihyun/work_images/bx/jihyunparkhomepage/*.mp4
+sample/portfolio/07_jihyun/work_images/bx/jihyunparkhomepage/jihyunparkhomepage.mp4
