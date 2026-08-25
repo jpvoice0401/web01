@@ -19,11 +19,11 @@
     let noteIndex = 0;
 
     const SOUND_MODES = [
-        { id: "marimba", icon: "🪵", name: "MARIMBA", label: "🪵 MARIMBA" },
-        { id: "water", icon: "💧", name: "WATER DROP", label: "💧 WATER DROP" },
-        { id: "piano", icon: "🎹", name: "FELT PIANO", label: "🎹 FELT PIANO" },
-        { id: "breeze", icon: "🌬️", name: "AIRY BREEZE", label: "🌬️ AIRY BREEZE" },
-        { id: "mute", icon: "🔇", name: "MUTE", label: "🔇 MUTE" }
+        { id: "marimba", icon: "🪵", name: "MARIMBA" },
+        { id: "water", icon: "💧", name: "WATER DROP" },
+        { id: "piano", icon: "🎹", name: "FELT PIANO" },
+        { id: "breeze", icon: "🌬️", name: "AIRY BREEZE" },
+        { id: "mute", icon: "🔇", name: "SOUND OFF" }
     ];
 
     let currentModeIndex = 0; // Starts with Warm Marimba
@@ -325,12 +325,12 @@
         const mode = SOUND_MODES[currentModeIndex];
 
         if (mode.id === "mute") {
-            btn.innerHTML = `<span class="sound-icon">🔇</span><span class="sound-label">SOUND OFF (MUTE)</span>`;
+            btn.innerHTML = `<span class="sound-icon">🔇</span><span class="sound-label">SOUND OFF</span>`;
             btn.style.background = "#111111";
             btn.style.color = "#666666";
             btn.style.borderColor = "#282828";
         } else {
-            btn.innerHTML = `<span class="sound-icon">${mode.icon}</span><span class="sound-label">${mode.label}</span>`;
+            btn.innerHTML = `<span class="sound-icon">${mode.icon}</span><span class="sound-label">${mode.name}</span>`;
             btn.style.background = "#111111";
             btn.style.color = "#CEFF00";
             btn.style.borderColor = "rgba(206, 255, 0, 0.45)";
