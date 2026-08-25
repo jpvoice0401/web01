@@ -40,7 +40,7 @@ const PORTFOLIO_PROJECTS = [
         ],
         "description": "예술과 디자인, AI 기술의 융합을 담은 박지현 공식 디지털 아카이브(www.jihyunpark.art)입니다. 인터랙티브 비주얼 시스템부터 글로벌 다국어 웹 플랫폼 구축까지 전 과정을 1인 총괄 직접 기획·디자인·개발했습니다.",
         "featured": true,
-        "link": "http://jihyunpark.art/sample/portfolio/07_jihyun/index.html"
+        "link": "https://www.jihyunpark.art/"
     },
     {
         "id": "hansei-univ-web-bx",
