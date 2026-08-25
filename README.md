@@ -1,5 +1,8 @@
 # 🏛️ JI-HYUN PARK // PORTFOLIO & INTERACTIVE ARCHIVE (v2.0)
 
+[![GitHub Repository](https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github)](https://github.com/jpvoice0401/web01)
+[![GitHub Pages](https://img.shields.io/badge/Live-Demo_Pages-00FFA3?style=for-the-badge&logo=githubpages&logoColor=black)](https://jpvoice0401.github.io/web01/sample/portfolio/07_jihyun/index.html)
+
 > **"개념을 구조로, 구조를 이미지로 전환하는 3가지 교차점 (Artist · Designer · Educator)"**  
 > 박지현(Ji-Hyun Park) 교수의 인터랙티브 포트폴리오 웹 아카이브입니다. 스위스 그래픽 스타일의 에디토리얼 타이포그래피와 실시간 제너레이티브 캔버스 물리 인터랙션을 융합하여 구축되었습니다.
 
@@ -9,14 +12,13 @@
 
 | 페이지 구분 | 설명 | 바로가기 링크 |
 | :--- | :--- | :--- |
-| **🚀 Main Poster (Home)** | 스위스 포스터 레이아웃 & 키네틱 물리 타이포그래피 메인 | [🔗 메인 페이지 열기](index.html) |
-| **💼 Curated Archive** | 45개 엄선 프로젝트 (미디어아트, BX, 파인아트, 학술) 통합 아카이브 | [🔗 아카이브 열기](archive.html) |
-| **🏛️ Academic CV** | 박사 논문, 학술지 논문, 산학협력 및 대학 특강 상세 이력서 | [🔗 Academic CV 열기](about_general.html) |
-| **🎨 Artist CV (Trilingual)** | 13회 개인전, 국공립미술관 소장품, 3개 국어(한·영·중) 작가 이력서 | [🔗 Artist CV 열기](about_artist.html) |
-| **🧭 Perspective Gateway** | 3대 전문 영역(아티스트 / 디렉터 / 교육자) 관점 선택 게이트웨이 | [🔗 관점 선택 열기](about.html) |
+| **🚀 Main Poster (Home)** | 스위스 포스터 레이아웃 & 키네틱 물리 타이포그래피 메인 | [🔗 메인 페이지 열기](https://jpvoice0401.github.io/web01/sample/portfolio/07_jihyun/index.html) |
+| **💼 Curated Archive** | 45개 엄선 프로젝트 (미디어아트, BX, 파인아트, 학술) 통합 아카이브 | [🔗 아카이브 열기](https://jpvoice0401.github.io/web01/sample/portfolio/07_jihyun/archive.html) |
+| **🏛️ Academic CV** | 박사 논문, 학술지 논문, 산학협력 및 대학 특강 상세 이력서 | [🔗 Academic CV 열기](https://jpvoice0401.github.io/web01/sample/portfolio/07_jihyun/about_general.html) |
+| **🎨 Artist CV (Trilingual)** | 13회 개인전, 국공립미술관 소장품, 3개 국어(한·영·중) 작가 이력서 | [🔗 Artist CV 열기](https://jpvoice0401.github.io/web01/sample/portfolio/07_jihyun/about_artist.html) |
+| **🧭 Perspective Gateway** | 3대 전문 영역(아티스트 / 디렉터 / 교육자) 관점 선택 게이트웨이 | [🔗 관점 선택 열기](https://jpvoice0401.github.io/web01/sample/portfolio/07_jihyun/about.html) |
 
 * **GitHub Repository**: [https://github.com/jpvoice0401/web01](https://github.com/jpvoice0401/web01)
-* **GitHub Pages**: [https://jpvoice0401.github.io/web01/sample/portfolio/07_jihyun/index.html](https://jpvoice0401.github.io/web01/sample/portfolio/07_jihyun/index.html)
 * **Local Web Server**: `http://localhost:3000/index.html`
 
 ---
@@ -71,7 +73,7 @@
 ## 📂 프로젝트 디렉토리 구조
 
 ```
-07_jihyun/
+sample/portfolio/07_jihyun/
 ├── index.html               # 🚀 메인 포스터 & 키네틱 물리 타이포그래피
 ├── archive.html             # 💼 45개 프로젝트 통합 아카이브 & 라이트박스 모달
 ├── about_general.html       # 🏛️ ACADEMIC CV (학술 연구, 논문, 산학 협력)
