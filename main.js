@@ -443,7 +443,7 @@
         const projects = window.PORTFOLIO_PROJECTS || [];
         const filtered = filter === "all"
             ? projects
-            : projects.filter(p => p.category === filter);
+            : projects.filter(p => p.category === filter || (Array.isArray(p.categories) && p.categories.includes(filter)));
 
         container.innerHTML = "";
 

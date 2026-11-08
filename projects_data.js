@@ -16,7 +16,8 @@ const PORTFOLIO_PROJECTS = [
     {
         "id": "jihyunpark-art-official-web",
         "category": "bx",
-        "categoryName": "BX & DIGITAL ARCHIVE",
+        "categories": ["bx", "digital-dev"],
+        "categoryName": "DIGITAL / AX DEV · BX",
         "title": "JIHYUN PARK — AX VISUAL DIRECTOR · ARTIST · EDUCATOR\n박지현 공식 디지털 아카이브 & 인터랙티브 웹 플랫폼",
         "subtitle": "기획 · 비주얼 디자인 · 프론트엔드 인터랙션 개발 1인 총괄 직접 디렉팅 (Solo Directing & Engineering)",
         "year": "2026",
@@ -45,7 +46,8 @@ const PORTFOLIO_PROJECTS = [
     {
         "id": "hansei-univ-web-bx",
         "category": "bx",
-        "categoryName": "BX",
+        "categories": ["bx", "digital-dev"],
+        "categoryName": "DIGITAL / AX DEV · BX",
         "title": "HANSEI UNIVERSITY : DIGITAL INTERFACE DESIGN\n한세대학교 메인페이지 디자인",
         "subtitle": "신규 대표홈페이지 구축 TF 디자인 부문 총괄 — 기획부터 디자인 시스템 수립까지",
         "year": "2026",
